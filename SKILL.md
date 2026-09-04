@@ -1,42 +1,44 @@
 ---
 name: mep
-description: Use this when the offer document exists and the founder needs the thing to put on the screen in the sales hour. They say "/mep", "build my shell", "build the MEP", "build that" right after a call with a named person (it runs on that person's folder), "/mep [name]" (the name picks the folder), "build the shell for [company] off my cold list" (the cold path, for a company on squad/cold-list.md nobody has talked to yet), or "continue the MEP" (picking a stopped run back up). It reads squad/business.md and the buyer's own words, or on the cold path that company's row and what can be seen from outside, each line labeled an observation and never a quote, and writes a one-screen plan (the buyer, the one slice of their problem in their words, what the shell shows, what is not in it, day one and day two), stops for go, then builds one local file by business model: one page on the design cage, a Notion structure as a CSV, one piece in the buyer's voice, or a 3-screen clickable prototype. Nothing deploys, nothing gets a URL, nothing is invented about the buyer. The founder screen-shares it and sends by hand.
+description: Use this when the offer document exists and the founder needs the deck to put on the screen in the sales hour. They say "/mep", "build my deck", "build the MEP", "build that" right after a call with a named person (it runs on that person's folder), "/mep [name]" (the name picks the folder), "build the deck for [company] off my cold list" (the cold path, for a company on squad/cold-list.md nobody has talked to yet), or "continue the MEP" (picking a stopped run back up). It reads squad/business.md and the buyer's own words, or on the cold path that company's row and what can be seen from outside, each line labeled an observation and never a quote, writes a one-screen plan (the buyer, the one slice of their problem in their words, the model, what the demo slides show, the 9 slides, what is not in it, day one and day two), stops for go, builds the demo by business model (a site built with the design plugin and captured onto the demo slides, or one piece beside theirs; the engagement's structure with their facts as rows; 3 drawn screens with the money button disabled), then writes one self-contained deck.html of 9 slides at 1920x1080 on the slide cage, its beat map, and deck.pdf when a headless browser is on the laptop. Nothing deploys, nothing gets a URL, nothing is invented about the buyer. The founder puts it on the screen and sends the PDF by hand.
 ---
 
 # The MEP
 
-The Minimum Executable Product: the shell of the offer, built for one buyer, real enough to
-put on a screen in the sales hour, inside the 2 days the lesson scopes. Your work, in one
-line: **read the offer document and the buyer's own words, plan the one slice, build the one
-file a laptop builds with nothing new installed, and hand it to the founder to show.** The
-founder's part: go, one look, the screen share, the send by hand.
+The Minimum Executable Product is a deck: 9 slides for one buyer that explain the offer and
+look like it already runs, built inside the 2 days the lesson scopes, on the screen in the
+sales hour. Your work, in one line: **read the offer document and the buyer's own words, plan
+the one slice, build the demo the model calls for, put it on 3 slides inside one deck, and
+hand the deck to the founder to show.** The founder's part: go, one look, the screen share,
+the PDF sent by their hand.
+
+The deck is a sales object for one person. Finished on the surface, nothing behind it. The
+test it has to pass is strict: if it could be shown to anybody in the trade, it is a template,
+and the buyer treats it like one. So the deck names this buyer, in their facts, their town and
+their words, or it is not done. Real production happens after the money.
 
 The buyer is usually somebody the founder already talked to. On **the cold path** they are a
 company off `squad/cold-list.md` who has said nothing to anybody here, so there are no words
-to quote and the intake is the row plus what can be seen from outside. Step 0 carries that
+to quote and the intake is the row plus what can be seen from outside. Beat 0 carries that
 branch, and one rule rides on top of it: an observation is never dressed up as a quote.
 
-The shell is a sales object for one person. Finished on the surface, rough underneath. The
-test it has to pass is strict: if it could be sent to anybody in the trade, it is a
-template, and the buyer treats it like one. So the shell names this buyer, in their facts,
-their place and their words, or it is not done. On the cold path their words are the one
-broken thing the list saw, and that sentence is what has to make it theirs.
-
 This skill runs in ANY founder's repo. `.claude/squad-roots.md` is the per-repo instance
-file every member-run skill reads first (founder name, voice sample, the `clients` path),
-and its values win over the `squad/` paths written below, which are worked examples. A row
-reading "(none yet)" is an unanswered field, not an override: the worked-example path
-stands. This run writes no roots row; the shell carries the buyer's brand, and the roots
-file is the founder's.
+file every member-run skill reads first (founder name, `accent color`, the `clients` path;
+those 3 rows and no others), and its values win over the `squad/` paths written below, which
+are worked examples. A row reading "(none yet)" is an unanswered field, not an override: the
+worked-example path stands. This run writes no roots row; the deck carries the buyer's name
+and the roots file is the founder's. The rail on these slides carries the buyer's name, never
+the roots file's `brand (the rail)` row, which belongs to the founder's own decks.
 
 ## The run map (where you run, where you STOP)
 
 | Beat | Mode |
 |---|---|
-| 0 THE READ | AUTO: the install check, `squad/business.md`, the buyer's folder, or on the cold path that company's row in `squad/cold-list.md` (one exception: HUMAN INPUT, which buyer, only when `squad/clients/` holds more than one folder and no name was given, or a named company sits in neither place) |
-| 1 THE PLAN | AUTO, one screen, then **STOP · GATE: go, or a different slice** |
-| 2 THE BUILD | AUTO, one file by model. The page carries the plugin's own turns, HUMAN INPUT 3 times: the install once per laptop, a yes on the 7 pre-filled answers, the pick of one direction from 3. The piece carries HUMAN INPUT once: the paste of the buyer's current piece |
-| 3 THE LOOK | AUTO, one line, then **STOP · GATE: the founder names what would read the same for anyone else; nothing to name means done** |
+| 0 THE READ | AUTO: the install check (`references/deck-shapes.md`, `references/deck-cage.css`), `squad/business.md` (the model), the buyer folder, or on the cold path that company's row, or the buyer type. HUMAN INPUT, one question, only when `squad/clients/` holds more than one folder and no name was given, or a named company sits in neither place |
+| 1 THE PLAN | AUTO, one screen at `squad/mep/<name>/plan.md`, then **STOP · GATE: go, or a different slice** |
+| 2 THE DEMO | AUTO by model. The site carries the plugin's own turns, HUMAN INPUT 3 times: the install once per laptop, a yes on the 7 pre-filled answers, the pick of one direction from 3; then the 3 captures. The piece carries HUMAN INPUT once: the paste of the buyer's current piece. The structure and the screens carry none |
+| 3 THE DECK | AUTO: `deck.html`, `deck.md`, and `deck.pdf` when a renderer is found |
+| 4 THE LOOK | AUTO, one line, then **STOP · GATE: the founder names anything that would read the same for anyone else; nothing to name means done**. With no named buyer the same gate asks for a go instead, because the deck is a shape until a call books |
 
 The beat numbers ARE the step numbers below. 2 gates, no more. The plugin's turns inside
 beat 2 are the plugin's stops, not this skill's gates, and the run map counts them so the
@@ -50,88 +52,112 @@ one missing or incomplete.
 
 | Missing or incomplete | Resume at |
 |---|---|
-| `squad/business.md` does not exist | stop: G5 forges it, or G4's draft when a call handed one over |
-| no `squad/mep/<first-last>/plan.md` | beat 0 |
+| `squad/business.md` does not exist | stop: the Winning Offer writes it, warm (g4) or cold (g5) |
+| the trigger carries no name ("continue the MEP") | resolve `<name>` from `squad/mep/` first: the one folder there whose files are incomplete, the newest when more than one. Only an empty `squad/mep/` falls through to beat 0 |
+| no `squad/mep/<name>/plan.md` | beat 0 |
 | `plan.md` exists and its last line carries no `go <date>` | beat 1, THE GATE ONLY: print the plan, never rewrite it |
-| `plan.md` says go and the file is missing or partial (the page: no `client.md` means the 7 answers, `client.md` with `style: UNKNOWN` means the direction, no `index.html` means the build; the structure: `structure.csv` with no `notion.md`; the piece: `piece.md` with no `## THE PIECE`; the prototype: fewer than 3 screens) | beat 2, at the file it names |
-| the file is whole and the founder has not looked | beat 3 |
+| `plan.md` says go and the demo is missing or partial (the site: no `client.md`, or a `client.md` carrying no `answers yes` line, means the 7 answers; `client.md` with `answers yes` and `style: UNKNOWN` means the direction; no `index.html` means the build; fewer than 3 `shot-*.png` means the captures; the piece: `piece.md` with no `## THE PIECE`; the structure: no `structure.csv`; the screens: nothing to check, the deck is next) | beat 2, at the file it names |
+| the demo is whole and `deck.html` or `deck.md` is missing | beat 3 |
+| `deck.html` exists, `deck.pdf` does not, and a renderer is found | beat 3, the PDF only |
+| the deck is whole and the founder has not looked | beat 4 |
 
 Never re-ask a yes the files already show, and never rebuild a file that opens.
 
-## The outputs (2 outputs, every run)
+## The outputs (one folder, every run)
 
-1. `squad/mep/<first-last>/plan.md`: one screen, the plan, with `go <date>` as its last
-   line once the founder says go. The folder name matches the buyer's folder under
-   `squad/clients/`; on the cold path it is the company's name off `squad/cold-list.md`;
-   with no named buyer at all it is the buyer type off the offer document's WHO line. All
-   3 lowercased and hyphenated, and `<first-last>` below stands for whichever one this run
-   resolved.
-2. The shell, one by model, in the same folder: `index.html` for the page (the plugin
-   writes its own `client.md` beside it, the 7 answers it builds from, and nothing else);
-   `structure.csv` plus `notion.md` for the structure; `piece.md` for the piece;
-   `prototype/index.html` for the prototype.
+All of it in `squad/mep/<name>/`. The folder name matches the buyer's folder under
+`squad/clients/`; on the cold path it is the company's name off `squad/cold-list.md`; with no
+named buyer at all it is the buyer type off the offer document's WHO line. All 3 lowercased
+and hyphenated, and `<name>` below stands for whichever one this run resolved.
 
-No `send.md`, no `log.md`, no roots row, no `squad/demos/`, no `images.md`, no `images/`,
-no second page, no second flow. Nothing else gets written.
+1. `plan.md`: one screen, the plan, with `go <date>` as its last line once the founder says go.
+2. `deck.md`: the beat map, one row per slide: the slide, what the founder says, what is on it.
+3. `deck.html`: the deck, one self-contained file, the cage CSS inline, one `<section>` per
+   slide at 1920x1080, arrow keys and a click between slides, a print sheet at one slide per
+   page.
+4. `deck.pdf`: when a headless browser is found on the laptop. Otherwise the founder prints it
+   from the browser and `deck.md` says so.
+5. The demo files, by model: `index.html` with the plugin's `client.md` beside it and
+   `shot-1.png`, `shot-2.png`, `shot-3.png` (the site); `piece.md` (the piece);
+   `structure.csv` (the structure); nothing past the deck (the screens).
 
-## Step 0 · The read
+No `send.md`, no `log.md`, no roots row, no `squad/demos/`, no `images.md`, no `images/`, no
+`notion.md`, no `prototype/`, no second deck, no second flow. Nothing else gets written.
 
-**First, a self-check.** `references/shell-shapes.md`, inside this skill's folder next to
-`SKILL.md`, must open. Missing means stop and tell the founder to finish the install: copy
-the whole skill folder, `references/` included.
+## Beat 0 · The read
+
+**First, a self-check.** `references/deck-shapes.md` and `references/deck-cage.css`, inside
+this skill's folder next to `SKILL.md`, must open. Either missing means stop and tell the
+founder to finish the install: copy the whole skill folder, `references/` included.
 
 **Then the offer document.** Open `squad/business.md`. Read THE SENTENCE, THE MODEL, WHO,
-THE STACK and PRICE; a file holding only `## THE DRAFT` and no `confirmed` stamp is
-enough (its who, deliverable, model and price lines). No file at all: say so in one line,
-name G5 (the market path) or G4 (a warm call drafts it), and stop. The model word, with
-THE STACK when the model is agency, decides the shape by the table in
-`references/shell-shapes.md`. The shape is never a question.
+THE STACK and PRICE; a document whose last line carries no `confirmed <date>` stamp is
+enough: read the same headings and build. No file at all: say so in one line, name the
+Winning Offer (warm off a call in g4, cold off the market in g5), and stop. The model word,
+with THE STACK when the model is agency, decides the demo by the table in
+`references/deck-shapes.md`. The demo is never a question.
 
-**Then the buyer.** The folder is the name in the trigger when one was given ("build that"
-right after a call, `/mep <name>`); otherwise the one folder under `squad/clients/`,
-`self/` and `references/` not counted (the second is W1's screenshot folder, never a
-person). More than one folder and no name: one question, in one message, the folders listed
-one line each with their THE IDEA line. Read
-`notes.md` whole (QUOTES, THE PROBLEM, THE COST, WHAT THEY PAY NOW, THE IDEA, THE
-MODEL, THE NEXT STEP) and `transcript.md` for the buyer's nouns. A number appears in the
-shell only when `notes.md` carries it. Read the language off the quotes: a non-Latin
-script is one LANGUAGE line in the plan (the reference names the gap).
+**Then the buyer.** The folder is the name in the trigger when one was given (`/mep
+<name>`). On "build that", it is the client folder whose `notes.md` was written last, named
+back in one line. On a resume with no name, it is the folder the resume table above
+resolved. Otherwise the one folder under `squad/clients/`, `self/` and `references/` not
+counted. More than one folder and no name: one question, in one message, the folders listed
+one line each with their THE IDEA line. Read `notes.md`
+whole (QUOTES, THE PROBLEM, THE COST, WHAT THEY PAY NOW, THE IDEA, THE MODEL, THE NEXT
+STEP) and `transcript.md` for the buyer's nouns. A number appears on a slide only when
+`notes.md` carries it. Read the language off the quotes: a non-Latin script is one
+LANGUAGE line in the plan (the reference names the gap).
 
-**The cold path**, when the founder says "build the shell for <company> off my cold list",
+**The cold path**, when the founder says "build the deck for <company> off my cold list",
 or the name they gave has no folder under `squad/clients/` and does have a row in
 `squad/cold-list.md`. Nobody has talked to this company, so there is no folder, no
 `notes.md`, no `transcript.md` and no quote. Read that row instead: the company, its town,
 its trade, and the one broken-thing sentence the cut carries, plus what you can see from
 outside. Every line of it is labeled an observation with the list's own `cut <date>`, and
 every fact the row does not carry is `UNKNOWN`. The folder is `squad/mep/<company>/`.
-`references/shell-shapes.md` says what each shape fills in when there are no words. A name
-in neither place is one question, asked once: which company, and off which list.
+`references/deck-shapes.md` says what each slide does when there are no words. A name in
+neither place is one question, asked once: which company, and off which list.
 
 **No named buyer yet** (the market-path founder, `self/` at most): build for the buyer
 type in WHO into `squad/mep/<buyer-type>/`, every buyer-specific noun a marked blank in
 square brackets, and rebuild under a name the day the first call books. The reference
 carries the marking.
 
+**Then the renderer**, so beat 2 and beat 3 know it: look for headless Chrome or Edge at
+the paths the reference lists, and remember which one answered, or that none did. No
+install is asked for.
+
 This beat prints nothing on its own; the plan is the first thing the founder sees.
 
-## Step 1 · The plan
+## Beat 1 · The plan
 
-Write `squad/mep/<first-last>/plan.md`, one screen, in this shape, and print it whole:
+Write `squad/mep/<name>/plan.md`, one screen, in this shape, and print it whole:
 
 ```
 # MEP · <buyer name, or the buyer type>
 
 THE BUYER   <name>, <what they do>, <their town>
 THE SLICE   "<the one problem, in their words>" (<the label notes.md gives it>)
-THE SHAPE   <the page | the structure | the piece | the prototype> (THE MODEL: <word>)
+THE MODEL   <agency | consulting | software>
 
-IT SHOWS
-1. <the first thing the shell shows>
-2. <the second>
-3. <the third>
+THE DEMO    <the site: 3 captures | the piece beside theirs | the structure, N rows | 3 screens>
+1. <what slide 5 shows>
+2. <what slide 6 shows>
+3. <what slide 7 shows>
+
+THE SLIDES
+1. <their name, their town>
+2. <the quote>
+3. <the cost, or: dropped, no cost on the call>
+4. <the slice, as the offer fixes it>
+5. <demo>
+6. <demo>
+7. <demo>
+8. <the first 14 days>
+9. This week or next.
 
 NOT IN IT
-<the shape's list from the reference, one line>
+<the shared list from the reference plus the demo's own, one line>
 
 DAY ONE
 - <task>
@@ -145,11 +171,10 @@ LANGUAGE   <only when the buyer's market writes in a non-Latin script>
 ```
 
 The slice is one quote, the strongest problem line in `notes.md`, verbatim, with the label
-`notes.md` gives it (a warm call, or the founder's recollection); the shell is built on
-that one problem and nothing wider. The 3 things it shows, the not-in-it list and the 2
-day lists come from the shape's section in the reference, with the buyer's nouns filled
-in. No XYZ line, no call question, no point
-system, no clock.
+`notes.md` gives it (a warm call, or the founder's recollection); the deck is built on that
+one problem and nothing wider. The demo's 3 lines, the not-in-it list and the 2 day lists
+come from the demo's section in the reference, with the buyer's nouns filled in. No price
+line, no XYZ line, no call question, no point system, no clock.
 
 **On the cold path the slice is not a quote and never wears quote marks.** The line reads
 `THE SLICE   <the row's broken-thing sentence> (observation · cold list <cut date>)`, and
@@ -159,14 +184,14 @@ what it is.
 
 **STOP · GATE.** One line under the plan: "Go, or a different slice: name it, or point at
 another quote, and I rewrite this." On the cold path the second half reads: point at
-another thing you can see from outside. A different slice rewrites the plan and prints it again.
-On go, append `go <date>` as the plan's last line, then build.
+another thing you can see from outside. A different slice rewrites the plan and prints it
+again. On go, append `go <date>` as the plan's last line, then build.
 
-## Step 2 · The build
+## Beat 2 · The demo
 
-Read the shape's section in `references/shell-shapes.md` and follow it exactly. In short:
+Read the demo's section in `references/deck-shapes.md` and follow it exactly. In short:
 
-**The page** (agency). Check the `execution-design` plugin first: its `design` skill and
+**The site** (agency). Check the `execution-design` plugin first: its `design` skill and
 the `/execution-design:design` command answer. Missing, print these 2 lines, once per
 laptop, and stop until it is in (a reload request means `/reload-plugins`):
 
@@ -175,72 +200,117 @@ laptop, and stop until it is in (a reload request means `/reload-plugins`):
 /plugin install execution-design@execution-design
 ```
 
-Then run the plugin with `squad/mep/<first-last>/` as its project root, phases 1, 2, 3
-and 5 only. Phase 1: fill its `client.md` from the offer document and `notes.md`, every
-unknown fact `UNKNOWN`, then print the 7 questions with their pre-filled answers for one
-yes; the founder fixes any line and copies the review count and rating off Maps. Phase 2:
-the plugin's 3 directions, the founder picks one. Phase 3: one `index.html`, styles
-inline, every image slot a painted placeholder, the form's action empty and its button
-disabled with the plugin's own line under it. Phase 5: the 9 boxes graded, box 5 as a
-count, boxes 8 and 9 open, and any box the page actually fails open with them. Phases 4,
-6 and 7 are skipped and you say so in one line: no image files, no key, no Lighthouse, no
-analytics, no redirects, no deploy.
+Then run the plugin with `squad/mep/<name>/` as its project root, phases 1, 2, 3 and 5
+only. Phase 1: fill its `client.md` from the offer document and `notes.md`, every unknown
+fact `UNKNOWN`, then print the 7 questions with their pre-filled answers for one yes; the
+founder fixes any line and copies the review count and rating off Maps. On that yes, append
+`answers yes <date>` as the last line of `client.md`, so a window that closes here resumes at
+the questions and not past them. Phase 2: the plugin's 3 directions, the founder picks one.
+Phase 3: one `index.html`, styles inline,
+every image slot a painted placeholder, the form's action empty and its button disabled
+with the plugin's own line under it. Phase 5: the 9 boxes graded, box 5 as a count, boxes
+8 and 9 open, and any box the page actually fails open with them. Phases 4, 6 and 7 are
+skipped and you say so in one line: no image files, no key, no Lighthouse, no analytics,
+no redirects, no deploy.
 
-**The structure** (consulting). `structure.csv`: the header row is the columns the
-engagement would track, in the buyer's words; the rows are facts from `notes.md`, 5 at
-most, none invented. `notion.md`: the one line that sits above the database, the one
-view, and the import path (Settings, Import, CSV, or `/csv` on a page; map each column).
-The founder's own Notion, no connector.
+Then the 3 captures, `shot-1.png`, `shot-2.png`, `shot-3.png` at 1920x1080: the top of the
+page, the middle, the money action. A renderer was found at beat 0: capture them the way the
+reference says. None: say in 3 lines how the founder takes them by hand and where to drop
+them, and build the deck anyway; its demo slides fill in when the files land.
 
 **The piece** (agency, content). HUMAN INPUT, one message: paste the buyer's current
 piece (a post, a script, a newsletter) and name the channel. Then `piece.md`: theirs as
 posted, then one piece in their voice for the same channel, on the slice. Text only.
 
-**The prototype** (software). `prototype/index.html`: 3 screens, hash links between
-them, fake data carrying the buyer's real nouns, one flow that ends on the money button,
-disabled, with one line under it saying nothing is wired.
+**The structure** (consulting). `structure.csv`: the header row is the columns the
+engagement would track, in the buyer's words; the rows are facts from `notes.md`, 5 at
+most, none invented. A plain CSV: it opens in the founder's own spreadsheet or Notion, and
+the reference carries the import path for the beat map.
 
-Open the file in the laptop's browser when it is a page or a prototype (or tell the founder
-to double-click it). Then say what got written, one line per file, and move to the look.
+**The screens** (software). Nothing on disk past the deck. The 3 screens are drawn in HTML
+inside slides 5, 6 and 7 at beat 3: fake data carrying the buyer's real nouns, one flow
+that ends on the money button, disabled, with one line under it saying nothing is wired.
 
-## Step 3 · The look
+Say what got written, one line per file, and move to the deck.
 
-Print one line, quoted from the file, in this shape:
+## Beat 3 · The deck
+
+Write `deck.html` from the skeleton in the reference: `references/deck-cage.css` pasted
+whole into `<style>`, the accent line under it from the roots file's `accent color` row
+(`#146ef5` when the row is missing or reads "(none yet)"), one `<section class="slide">`
+per slide, the rail on every slide (their name left, the slide number right), the viewer
+script last. The 9 slides are the spine in the reference; slides 5, 6, 7 are the demo's
+section. Slide 3 is dropped when `notes.md` carries no cost, and the deck is 8. The numbers
+1 to 9 in the spine are names, not the rail: the rail counts the sections that exist, so a
+deck with the cost slide dropped rails 1 to 8, and `deck.md`'s Slide column carries that
+same rail number with `Skipped: the cost slide, no cost on the call` under the table.
+
+Every readable word in Inter. One subject per slide, the word that carries it the biggest
+thing on it. No eyebrow or kicker label above a title. Numbers huge and tabular. No price of
+the founder's anywhere. Nothing on a slide that `notes.md`, the offer document, the row, or
+the founder's yes did not give: never a screenshot that was not captured, never a quote that
+was not said.
+
+Then `deck.md`, the beat map, one row per slide that exists, in the shape the reference
+gives: what the founder says over it (1 or 2 lines, their voice, no price) and what is on
+it. Its last 3 lines say what was skipped, which demo it holds, and where the PDF is.
+
+Then `deck.pdf`, when beat 0 found a renderer: the print command in the reference, then open
+it once and check the page count matches the slide count. None found: one line in the chat
+and in `deck.md`: print from the browser, File, Print, Save as PDF, one slide per page.
+
+Open `deck.html` in the laptop's browser (or tell the founder to double-click it). Say what
+got written, one line per file, and move to the look.
+
+## Beat 4 · The look
+
+Print one line, quoted from the deck, in this shape:
 
 ```
 It names <buyer> in 3 places: <a fact of theirs>, <their place>, "<their words>".
 ```
 
-On the cold path the third slot has no words in it. It carries the broken thing the shell
+On the cold path the third slot has no words in it. It carries the broken thing the deck
 acted on, with no quote marks and the same observation label the plan used.
 
-The page adds the plugin's box line. The open list is the boxes phase 5 actually graded
+With no named buyer the line names nobody, so print this instead: `It is built on [their
+name] and [their town]: <n> marked blanks, on <n> slides.` The gate under it reads: this one
+is a shape, not a deck. Say go and I file it; the day your first call books, run `/mep
+<name>` and it gets built for a person.
+
+The site adds the plugin's box line. The open list is the boxes phase 5 actually graded
 open, in order, never a fixed list: `9 boxes: <n> closed; open: 5 (<n> slots, 0 filled),
-8, 9.` Boxes 5, 8 and 9 are open on every shell (no image files, no deploy, the button
+8, 9.` Boxes 5, 8 and 9 are open on every site (no image files, no deploy, the button
 disabled). Box 2 joins them when the buyer's market writes in a non-Latin script and the
 font fell back.
 
-**STOP · GATE.** Then: "Open it. Name anything that would read the same for anyone else
-in their trade. I fix that and print this line again." Each named thing gets fixed in the
-file and the line re-prints. That is the whole grade; there is no score. When the founder
-has nothing left to name, one closing line: it goes on the screen in the sales hour, and
-`/the-close pre <name>` writes the one question before the call. Nothing gets sent from
-here.
+**STOP · GATE.** Then: "Open it. Arrow keys move it. Name anything that would read the
+same for anyone else in their trade. I fix that and print this line again." Each named
+thing gets fixed in the deck (and in the demo file it came from) and the line re-prints.
+That is the whole grade; there is no score. When the founder has nothing left to name, one
+closing line: it goes on the screen in the sales hour at the pitch beat, or leaves after as
+`deck.pdf` with the one line `CLAUDE.md` gives for sending after a call, by their hand, and
+`/the-close pre <name>` writes the one question before the call. Nothing gets sent from here.
 
 ## Rules
 
 - Every message to the founder is scannable: a short header, then bullets or a table.
 - Never send. Never deploy. No URL, no domain, no backend, no login, no payments, no form
-  wired to anything, no image file, no new account, no key, no paid seat. Nothing on the
-  buyer's domain, in their name or on their accounts until money clears.
-- Never price past `squad/business.md`. The founder's price is that document's line and
-  appears nowhere in the shell. A price on the shell is the buyer's own, from `notes.md`,
-  or the plugin's `quote only`.
+  wired to anything, no image file past the 3 captures, no new account, no key, no paid
+  seat. Nothing on the buyer's domain, in their name or on their accounts until money clears.
+- Never price past `squad/business.md`. The founder's price is that document's line, it
+  appears on no slide, and neither does any number worked out from it. The only money on a
+  slide is the buyer's own: what the problem costs them, off `notes.md`, or the prices in
+  their own services table inside the site capture, or the plugin's `quote only` where the
+  buyer publishes none.
 - Never invent a number, a name or a need. A number not in `notes.md` does not appear.
-  `UNKNOWN` stays `UNKNOWN` and is never a question mid-build.
-- Never paraphrase a quote. Verbatim, labeled, dated, in the language it was said.
+  `UNKNOWN` stays `UNKNOWN` and is never a question mid-build. A cost no call gave is a
+  dropped slide, never a guess.
+- Never invent a screenshot or a quote. A capture is of the page that exists; a slide with
+  no capture yet carries a labeled hole. A quote is verbatim, labeled, dated, in the
+  language it was said, never paraphrased.
 - Never save an observation as a quote. On the cold path nobody has said anything yet, so
   what you can see from outside is labeled an observation and carries no quote marks, and
   only words a person actually wrote or said are quoted.
-- One buyer, one slice, one file. The moment the shell would work for the shop next door,
+- One buyer, one slice, one deck. The moment the deck would work for the shop next door,
   it is a template, and the founder built the wrong thing.
