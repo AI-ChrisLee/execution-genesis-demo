@@ -17,6 +17,12 @@ test it has to pass is strict: if it could be shown to anybody in the trade, it 
 and the buyer treats it like one. So the deck names this buyer, in their facts, their town and
 their words, or it is not done. Real production happens after the money.
 
+When the founder can build the real thing inside the 2 days (a site, a page, a working
+screen), they build it and the deck shows it on slides 5 to 7; the site path already works
+this way, the page built for real and captured onto the demo slides. When they cannot, the
+deck alone is the MEP: the structure, the piece, or the 3 drawn screens stand in for the
+product, and the product gets built after the money.
+
 The buyer is usually somebody the founder already talked to. On **the cold path** they are a
 company off `squad/cold-list.md` who has said nothing to anybody here, so there are no words
 to quote and the intake is the row plus what can be seen from outside. Beat 0 carries that
@@ -59,7 +65,8 @@ one missing or incomplete.
 | `plan.md` says go and the demo is missing or partial (the site: no `client.md`, or a `client.md` carrying no `answers yes` line, means the 7 answers; `client.md` with `answers yes` and `style: UNKNOWN` means the direction; no `index.html` means the build; fewer than 3 `shot-*.png` means the captures; the piece: `piece.md` with no `## THE PIECE`; the structure: no `structure.csv`; the screens: nothing to check, the deck is next) | beat 2, at the file it names |
 | the demo is whole and `deck.html` or `deck.md` is missing | beat 3 |
 | `deck.html` exists, `deck.pdf` does not, and a renderer is found | beat 3, the PDF only |
-| the deck is whole and the founder has not looked | beat 4 |
+| the deck is whole and `deck.md`'s last line carries no `looked <date>` | beat 4 |
+| `deck.md` carries `looked <date>` | nothing to resume: say the deck is done and where it is |
 
 Never re-ask a yes the files already show, and never rebuild a file that opens.
 
@@ -71,7 +78,9 @@ named buyer at all it is the buyer type off the offer document's WHO line. All 3
 and hyphenated, and `<name>` below stands for whichever one this run resolved.
 
 1. `plan.md`: one screen, the plan, with `go <date>` as its last line once the founder says go.
-2. `deck.md`: the beat map, one row per slide: the slide, what the founder says, what is on it.
+2. `deck.md`: the beat map, one row per slide: the slide, what the founder says (in bold, it
+   is the line said out loud), what is on it. Its last line is `looked <date>` once the
+   founder has nothing left to name at beat 4.
 3. `deck.html`: the deck, one self-contained file, the cage CSS inline, one `<section>` per
    slide at 1920x1080, arrow keys and a click between slides, a print sheet at one slide per
    page.
@@ -79,10 +88,17 @@ and hyphenated, and `<name>` below stands for whichever one this run resolved.
    from the browser and `deck.md` says so.
 5. The demo files, by model: `index.html` with the plugin's `client.md` beside it and
    `shot-1.png`, `shot-2.png`, `shot-3.png` (the site); `piece.md` (the piece);
-   `structure.csv` (the structure); nothing past the deck (the screens).
+   `structure.csv` (the structure); nothing past the deck when the screens are drawn, and
+   the same 3 captures when a real screen was built inside the 2 days.
+
+A `cover.png` or `cover.jpg` in the same folder is the founder's, dropped in by hand: the
+buyer's own photo, their logo, or a screenshot of their current site. This skill reads it for
+slide 1 and never makes one.
 
 No `send.md`, no `log.md`, no roots row, no `squad/demos/`, no `images.md`, no `images/`, no
-`notion.md`, no `prototype/`, no second deck, no second flow. Nothing else gets written.
+`notion.md`, no `prototype/`, no second deck, no second flow. One throwaway wrapper page in
+the system temp folder, deleted the moment shots 2 and 3 are taken, is the only file written
+outside this folder. Nothing else gets written.
 
 ## Beat 0 · The read
 
@@ -127,6 +143,11 @@ carries the marking.
 the paths the reference lists, and remember which one answered, or that none did. No
 install is asked for.
 
+**Then the cover.** Look for `cover.png` or `cover.jpg` in `squad/mep/<name>/`, dropped
+there by the founder. Found, slide 1 carries it. Not found, the site path's `shot-1.png`
+stands in once it is captured, and every other path keeps a text cover. Nothing is asked
+for and nothing is made.
+
 This beat prints nothing on its own; the plan is the first thing the founder sees.
 
 ## Beat 1 · The plan
@@ -146,7 +167,7 @@ THE DEMO    <the site: 3 captures | the piece beside theirs | the structure, N r
 3. <what slide 7 shows>
 
 THE SLIDES
-1. <their name, their town>
+1. <their name, their town>, behind them <cover.png | cover.jpg | shot-1.png | nothing>
 2. <the quote>
 3. <the cost, or: dropped, no cost on the call>
 4. <the slice, as the offer fixes it>
@@ -173,8 +194,10 @@ LANGUAGE   <only when the buyer's market writes in a non-Latin script>
 The slice is one quote, the strongest problem line in `notes.md`, verbatim, with the label
 `notes.md` gives it (a warm call, or the founder's recollection); the deck is built on that
 one problem and nothing wider. The demo's 3 lines, the not-in-it list and the 2 day lists
-come from the demo's section in the reference, with the buyer's nouns filled in. No price
-line, no XYZ line, no call question, no point system, no clock.
+come from the demo's section in the reference, with the buyer's nouns filled in. Slide 1's
+line names what stands behind the cover: the file the founder dropped in, `shot-1.png` on
+the site path when none was, or nothing. No price line, no XYZ line, no call question, no
+point system, no clock.
 
 **On the cold path the slice is not a quote and never wears quote marks.** The line reads
 `THE SLICE   <the row's broken-thing sentence> (observation · cold list <cut date>)`, and
@@ -230,6 +253,10 @@ the reference carries the import path for the beat map.
 **The screens** (software). Nothing on disk past the deck. The 3 screens are drawn in HTML
 inside slides 5, 6 and 7 at beat 3: fake data carrying the buyer's real nouns, one flow
 that ends on the money button, disabled, with one line under it saying nothing is wired.
+When a real working screen exists, or gets built inside the 2 days, that screen goes on the
+slides instead: capture it at 1920x1080 as `shot-1.png`, `shot-2.png`, `shot-3.png` the way
+the reference says, and a drawn screen stands in only for what is not built. Nothing
+deploys, no URL, the money button stays disabled.
 
 Say what got written, one line per file, and move to the deck.
 
@@ -245,6 +272,12 @@ section. Slide 3 is dropped when `notes.md` carries no cost, and the deck is 8. 
 deck with the cost slide dropped rails 1 to 8, and `deck.md`'s Slide column carries that
 same rail number with `Skipped: the cost slide, no cost on the call` under the table.
 
+Slide 1 takes an image when one exists. `cover.png` or `cover.jpg` in the folder goes
+full-bleed behind the name (the cage's `.cover`: the image, its scrim, the name and town in
+white on top). No file, on the site path: `shot-1.png` stands there the same way, and its
+`onerror` drops the slide back to text until the capture lands. No file and no capture: the
+cover stays text, the `h1` and one `.sub`, and nothing is made to fill it.
+
 Every readable word in Inter. One subject per slide, the word that carries it the biggest
 thing on it. No eyebrow or kicker label above a title. Numbers huge and tabular. No price of
 the founder's anywhere. Nothing on a slide that `notes.md`, the offer document, the row, or
@@ -252,8 +285,9 @@ the founder's yes did not give: never a screenshot that was not captured, never 
 was not said.
 
 Then `deck.md`, the beat map, one row per slide that exists, in the shape the reference
-gives: what the founder says over it (1 or 2 lines, their voice, no price) and what is on
-it. Its last 3 lines say what was skipped, which demo it holds, and where the PDF is.
+gives: what the founder says over it (1 or 2 lines, their voice, no price, in bold because
+it is the line said out loud) and what is on it. Its closing lines say what was skipped,
+which demo it holds, and where the PDF is; beat 4 appends `looked <date>` under them.
 
 Then `deck.pdf`, when beat 0 found a renderer: the print command in the reference, then open
 it once and check the page count matches the slide count. None found: one line in the chat
@@ -286,18 +320,23 @@ font fell back.
 
 **STOP · GATE.** Then: "Open it. Arrow keys move it. Name anything that would read the
 same for anyone else in their trade. I fix that and print this line again." Each named
-thing gets fixed in the deck (and in the demo file it came from) and the line re-prints.
+thing gets fixed in the deck (and in the demo file it came from) and the line re-prints. A
+fix that lands in `index.html` is not on the deck until the shot is retaken: re-capture
+whichever of `shot-1.png`, `shot-2.png`, `shot-3.png` covers the section that changed, the
+way `references/deck-shapes.md` says, before the line re-prints. With no renderer, say which
+shot the founder has to retake by hand.
 That is the whole grade; there is no score. When the founder has nothing left to name, one
 closing line: it goes on the screen in the sales hour at the pitch beat, or leaves after as
-`deck.pdf` with the one line `CLAUDE.md` gives for sending after a call, by their hand, and
-`/the-close pre <name>` writes the one question before the call. Nothing gets sent from here.
+`deck.pdf` with the one line `CLAUDE.md` gives for sending after a call, by their hand.
+Nothing gets sent from here. Then append `looked <date>` as the last line of `deck.md`.
 
 ## Rules
 
 - Every message to the founder is scannable: a short header, then bullets or a table.
 - Never send. Never deploy. No URL, no domain, no backend, no login, no payments, no form
-  wired to anything, no image file past the 3 captures, no new account, no key, no paid
-  seat. Nothing on the buyer's domain, in their name or on their accounts until money clears.
+  wired to anything, no image file past the 3 captures (a cover the founder drops in is
+  theirs, not one this skill makes), no new account, no key, no paid seat. Nothing on the
+  buyer's domain, in their name or on their accounts until money clears.
 - Never price past `squad/business.md`. The founder's price is that document's line, it
   appears on no slide, and neither does any number worked out from it. The only money on a
   slide is the buyer's own: what the problem costs them, off `notes.md`, or the prices in

@@ -10,13 +10,13 @@ line takes its first word.
 | agency | a site, a page, a funnel, anything a browser opens, or anything else | the site: built for real, 3 captures on slides 5, 6, 7 | `index.html` (the plugin's `client.md` beside it), `shot-1.png`, `shot-2.png`, `shot-3.png` |
 | agency | posts, scripts, emails, newsletters, video | the piece: theirs, then the piece, then both side by side | `piece.md` |
 | consulting | anything | the structure: their columns, their facts as rows, one row lit | `structure.csv` |
-| software | anything | 3 screens drawn in the deck, one flow, the money button disabled | none past the deck |
+| software | anything | 3 screens, one flow, the money button disabled: a real screen captured when one is built inside the 2 days, drawn in the deck when it is not | none past the deck, or `shot-1.png`, `shot-2.png`, `shot-3.png` when a real screen was built |
 
 ## The spine (the 9 slides, every deck)
 
 | Slide | What is on it | The cage |
 |---|---|---|
-| 1 | Their name. Their town under it. Nothing else | statement: `h1`, one `.sub` |
+| 1 | Their name. Their town under it. Behind them, full-bleed, `cover.png` or `cover.jpg` when the founder dropped one in (their photo, their logo, a screenshot of their current site); on the site path with no file, `shot-1.png`; neither, text alone | cover: `.cover`, the `img` behind the `h1` and one `.sub`; text alone: statement, `h1`, one `.sub` |
 | 2 | Their problem, in their words: the strongest problem line off `notes.md`, verbatim, quote marks on, the label small under it (who, the date, "on the call") | quote: `.quote .q`, `.who` |
 | 3 | What it costs them, off `notes.md`: the number huge when the call gave one, the cost in their words when it gave words. **A cost no call gave stays off the deck**: the slide is dropped, the deck is 8, and `deck.md` says so | big number: `.big`, or quote |
 | 4 | The one thing I would do: the slice, as the founder's offer would fix it, in the offer document's language, one line | statement: `h2` |
@@ -33,7 +33,8 @@ carries the slide is the biggest thing on it; everything else stays small or sta
 ## Not in any deck (the list `plan.md` prints, and what keeps 2 days 2 days)
 
 Their domain, a URL, a deploy, a backend, a login, payments, a form wired to anything, an
-image file past the 3 captures, a second deck, a second flow, a new account, a key or a paid
+image file past the 3 captures (a cover the founder drops in is theirs, not one the skill
+makes), a second deck, a second flow, a new account, a key or a paid
 seat, a price, and anything about the buyer that `notes.md` does not carry. The deck opens on
 the founder's laptop and goes on a screen share, or leaves as `deck.pdf` by the founder's hand.
 Nothing goes on the buyer's domain, in their name or on their accounts until the money clears.
@@ -53,6 +54,8 @@ captured 3 times and put on the demo slides. The buyer sees their own site runni
    phone number carrying the action when `notes.md` holds one.
 
 Each slide is the capture in the card and nothing else. What to say over it is the beat map's.
+With no `cover.png` or `cover.jpg` dropped in, `shot-1.png` also stands full-bleed behind the
+name on slide 1.
 
 **Not in it**, past the shared list: more than one page, a CMS, a login, images you had to
 wait for, a wired form.
@@ -150,8 +153,14 @@ Notion connector, no one-page diagnosis, no `notion.md`.
 
 ## The screens (software)
 
-The flow the buyer would run on day one, drawn as 3 screens inside the deck, their data in the
-fields. No file past the deck: the screens are HTML on the slides, each in a `.frame`.
+The flow the buyer would run on day one, on 3 screens inside the deck, their data in the
+fields. Drawn, the screens are HTML on the slides, each in a `.frame`, and there is no file
+past the deck. Built for real, they are captures: a founder who can build the working screen
+inside the 2 days builds it and the deck shows it, captured at 1920x1080 as `shot-1.png`,
+`shot-2.png`, `shot-3.png` in the buyer's folder (the renderer, below) and put on slides 5,
+6 and 7 in a `.shot` card, the same way the site path does. A drawn screen stands in only
+for what is not built. Nothing deploys, nothing gets a URL, and the money button stays
+disabled either way.
 
 **Slides 5, 6, 7 show**
 
@@ -189,7 +198,18 @@ demo sections above.
 <body>
 <div class="deck">
 
+<!-- 1 the cover, text alone: no cover file dropped in and no capture to stand in -->
 <section class="slide pad grid">
+  <div class="mid z"><h1><buyer name></h1><p class="sub"><their town></p></div>
+  <div class="rail"><span><BUYER NAME></span><span>1</span></div>
+</section>
+
+<!-- 1 the cover with an image, INSTEAD of the section above: cover.png or cover.jpg the
+     founder dropped in, or shot-1.png on the site path. A file that does not open drops
+     the slide back to text -->
+<section class="slide pad cover">
+  <img src="cover.png" alt=""
+       onerror="this.parentElement.classList.replace('cover','grid');this.remove()">
   <div class="mid z"><h1><buyer name></h1><p class="sub"><their town></p></div>
   <div class="rail"><span><BUYER NAME></span><span>1</span></div>
 </section>
@@ -244,19 +264,22 @@ One table, one row per slide that exists, written after the deck so it matches t
 
 | Slide | You say | On the slide |
 |---|---|---|
-| 1 | <one or two lines, the founder's own opening> | <their name>, <their town> |
-| 2 | <read the quote, then stop> | "<the quote>" |
+| 1 | **<one or two lines, the founder's own opening>** | <their name>, <their town> |
+| 2 | **<read the quote, then stop>** | "<the quote>" |
 ...
-| 9 | This week or next. Then silence. | This week or next. |
+| 9 | **This week or next. Then silence.** | This week or next. |
 
 Skipped: the cost slide, no cost on the call (or "none")
 Demo: <the site: 3 captures | the piece | the structure | 3 screens>
 PDF: <deck.pdf, rendered <date> | print from the browser: File, Print, Save as PDF>
+looked <date>
 ```
 
 The Slide column carries the rail number the deck itself shows, so a deck built without the
 cost slide runs 1 to 8 and its last row is 8. The "You say" column is 1 or 2 lines a slide,
-in the founder's voice, and carries no price of the founder's.
+in the founder's voice, and carries no price of the founder's. It is bold, because it is the
+line he says out loud. The `looked <date>` line is appended at beat 4, once the founder has
+nothing left to name; until it is there, a resume goes back to the look.
 
 ## The renderer (the captures and `deck.pdf`)
 

@@ -6,6 +6,11 @@ to, that explain your offer and look like it already runs, built in 2 days. Not 
 The deck that sells it, on the one problem they told you about, with their name on it. The
 demo lives inside the deck, and its shape follows your business model.
 
+When you can build the real thing inside the 2 days (a site, a page, a working screen),
+build it, and the deck shows it on slides 5 to 7; a site deck already works this way, their
+page built for real and captured onto the slides. When you cannot, the deck alone is the
+MEP, and the product gets built after the money.
+
 ## What to bring
 
 Your offer document at `squad/business.md` (the Winning Offer wrote it, warm off your calls
@@ -16,6 +21,11 @@ tools.
 Going after a stranger instead? Then all it needs is that company's row on
 `squad/cold-list.md`. There are no quotes on that path, so everything it says about them is
 labeled an observation, and anything the row does not carry stays blank.
+
+Have their photo, their logo, or a screenshot of their current site? Drop it in
+`squad/mep/<their-name>/` as `cover.png` or `cover.jpg`, any time before the deck is
+written, and it goes full-bleed behind their name on the first slide. Without one, a site
+deck puts its own top capture there, and every other deck keeps a text cover.
 
 ## Run it
 
@@ -60,6 +70,6 @@ is the Close's job.
 
 ## What comes next
 
-The part that turns your first 90 days into weeks fitted to your hours. It arrives one
+The part that writes your 4-week plan, fitted to the hours you actually have. It arrives one
 episode at a time. Subscribe (the link under every episode) and each new part lands in your
 inbox the day its episode goes live.
