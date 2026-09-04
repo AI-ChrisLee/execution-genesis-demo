@@ -138,6 +138,31 @@ words, labeled `(offer document · <date>)`. The plan's last line before `go` sa
 under a name the day the first call books. Then `/mep <name>` builds the named one; the
 buyer-type folder stays as it is.
 
+## A cold buyer
+
+The company came off `squad/cold-list.md` and nobody has talked to them, so `notes.md` does
+not exist. The intake is that row: the company, its town, its trade, its one broken-thing
+sentence, plus what you can see from outside (their site on a phone, their Maps listing,
+whether the booking button goes anywhere, their review count). Every line of it is labeled
+`(observation · cold list <cut date>)` and carries no quote marks.
+
+What each shape does when there are no words:
+
+- **The page.** Slot 1, their business in their town, comes off the row, with the review
+  count and rating copied off Maps at the founder's yes. Slot 2 has no customer words to
+  use, so it carries the broken thing turned into the result the founder's own offer sells,
+  in `squad/business.md`'s language and never in the buyer's. Slot 3 is unchanged.
+- **The piece.** Their current piece is public, so the paste still works. The slice is the
+  observation.
+- **The structure.** The rows are the row's own facts, so there are fewer of them. The plan
+  says the count, and you never pad it.
+- **The prototype.** The fake data carries the nouns on the row and nothing else.
+
+Every fact the row does not carry is `UNKNOWN`, and `UNKNOWN` is never a question. The
+template test still holds: if the shell would read the same for the shop next door, it is
+not built yet, and on this path the broken-thing sentence is the only thing that makes it
+theirs.
+
 ## A non-Latin market
 
 The plugin's 16 pairings are Latin Google Fonts. A page for a buyer whose market writes in

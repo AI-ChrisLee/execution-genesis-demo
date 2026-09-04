@@ -11,11 +11,16 @@ Your offer document at `squad/business.md` (g5 wrote it, or a warm call drafted 
 and one buyer folder under `squad/clients/` (warm-extract wrote it after your call). That
 is the whole intake. No new accounts, no keys, no paid tools.
 
+Going after a stranger instead? Then all it needs is that company's row on
+`squad/cold-list.md`. There are no quotes on that path, so everything it says about them is
+labeled an observation, and anything the row does not carry stays blank.
+
 ## Run it
 
 Open Claude Code in your business folder and say: **"Build my shell."** Right after a call,
 **"build that"** works too, and **"/mep [name]"** picks the person when you have talked to
-more than one. (Downloaded this folder on its own? Drop the whole thing into
+more than one. For a stranger on your outreach list, say **"build the shell for [company]
+off my cold list."** (Downloaded this folder on its own? Drop the whole thing into
 `.claude/skills/`, then quit and reopen Claude Code.)
 
 It reads your offer and their words, and prints a one-screen plan: who, the one slice of

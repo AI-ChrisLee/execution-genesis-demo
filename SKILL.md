@@ -1,21 +1,26 @@
 ---
 name: mep
-description: Use this when the offer document exists and the founder needs the thing to put on the screen in the sales hour. They say "/mep", "build my shell", "build the MEP", "build that" right after a call with a named person (it runs on that person's folder), "/mep [name]" (the name picks the folder), or "continue the MEP" (picking a stopped run back up). It reads squad/business.md and the buyer's own words, writes a one-screen plan (the buyer, the one slice of their problem in their words, what the shell shows, what is not in it, day one and day two), stops for go, then builds one local file by business model: one page on the design cage, a Notion structure as a CSV, one piece in the buyer's voice, or a 3-screen clickable prototype. Nothing deploys, nothing gets a URL, nothing is invented about the buyer. The founder screen-shares it and sends by hand.
+description: Use this when the offer document exists and the founder needs the thing to put on the screen in the sales hour. They say "/mep", "build my shell", "build the MEP", "build that" right after a call with a named person (it runs on that person's folder), "/mep [name]" (the name picks the folder), "build the shell for [company] off my cold list" (the cold path, for a company on squad/cold-list.md nobody has talked to yet), or "continue the MEP" (picking a stopped run back up). It reads squad/business.md and the buyer's own words, or on the cold path that company's row and what can be seen from outside, each line labeled an observation and never a quote, and writes a one-screen plan (the buyer, the one slice of their problem in their words, what the shell shows, what is not in it, day one and day two), stops for go, then builds one local file by business model: one page on the design cage, a Notion structure as a CSV, one piece in the buyer's voice, or a 3-screen clickable prototype. Nothing deploys, nothing gets a URL, nothing is invented about the buyer. The founder screen-shares it and sends by hand.
 ---
 
 # The MEP
 
-The Minimum Executable Product: the shell of the offer, built for one buyer the founder
-already talked to, real enough to put on a screen in the sales hour, inside the 2 days the
-lesson scopes. Your work, in one line: **read the offer document and the buyer's own words,
-plan the one slice, build the one file a laptop builds with nothing new installed, and hand
-it to the founder to show.** The founder's part: go, one look, the screen share, the send by
-hand.
+The Minimum Executable Product: the shell of the offer, built for one buyer, real enough to
+put on a screen in the sales hour, inside the 2 days the lesson scopes. Your work, in one
+line: **read the offer document and the buyer's own words, plan the one slice, build the one
+file a laptop builds with nothing new installed, and hand it to the founder to show.** The
+founder's part: go, one look, the screen share, the send by hand.
+
+The buyer is usually somebody the founder already talked to. On **the cold path** they are a
+company off `squad/cold-list.md` who has said nothing to anybody here, so there are no words
+to quote and the intake is the row plus what can be seen from outside. Step 0 carries that
+branch, and one rule rides on top of it: an observation is never dressed up as a quote.
 
 The shell is a sales object for one person. Finished on the surface, rough underneath. The
 test it has to pass is strict: if it could be sent to anybody in the trade, it is a
 template, and the buyer treats it like one. So the shell names this buyer, in their facts,
-their place and their words, or it is not done.
+their place and their words, or it is not done. On the cold path their words are the one
+broken thing the list saw, and that sentence is what has to make it theirs.
 
 This skill runs in ANY founder's repo. `.claude/squad-roots.md` is the per-repo instance
 file every member-run skill reads first (founder name, voice sample, the `clients` path),
@@ -28,7 +33,7 @@ file is the founder's.
 
 | Beat | Mode |
 |---|---|
-| 0 THE READ | AUTO: the install check, `squad/business.md`, the buyer's folder (one exception: HUMAN INPUT, which person, only when `squad/clients/` holds more than one folder) |
+| 0 THE READ | AUTO: the install check, `squad/business.md`, the buyer's folder, or on the cold path that company's row in `squad/cold-list.md` (one exception: HUMAN INPUT, which buyer, only when `squad/clients/` holds more than one folder and no name was given, or a named company sits in neither place) |
 | 1 THE PLAN | AUTO, one screen, then **STOP · GATE: go, or a different slice** |
 | 2 THE BUILD | AUTO, one file by model. The page carries the plugin's own turns, HUMAN INPUT 3 times: the install once per laptop, a yes on the 7 pre-filled answers, the pick of one direction from 3. The piece carries HUMAN INPUT once: the paste of the buyer's current piece |
 | 3 THE LOOK | AUTO, one line, then **STOP · GATE: the founder names what would read the same for anyone else; nothing to name means done** |
@@ -57,8 +62,10 @@ Never re-ask a yes the files already show, and never rebuild a file that opens.
 
 1. `squad/mep/<first-last>/plan.md`: one screen, the plan, with `go <date>` as its last
    line once the founder says go. The folder name matches the buyer's folder under
-   `squad/clients/`; with no named buyer it is the buyer type off the offer document's WHO
-   line, lowercased and hyphenated.
+   `squad/clients/`; on the cold path it is the company's name off `squad/cold-list.md`;
+   with no named buyer at all it is the buyer type off the offer document's WHO line. All
+   3 lowercased and hyphenated, and `<first-last>` below stands for whichever one this run
+   resolved.
 2. The shell, one by model, in the same folder: `index.html` for the page (the plugin
    writes its own `client.md` beside it, the 7 answers it builds from, and nothing else);
    `structure.csv` plus `notion.md` for the structure; `piece.md` for the piece;
@@ -83,12 +90,22 @@ THE STACK when the model is agency, decides the shape by the table in
 **Then the buyer.** The folder is the name in the trigger when one was given ("build that"
 right after a call, `/mep <name>`); otherwise the one folder under `squad/clients/`,
 `self/` and `references/` not counted (the second is W1's screenshot folder, never a
-person). More than one folder and no name: the only question this beat asks, in one
-message, the folders listed one line each with their THE IDEA line. Read
+person). More than one folder and no name: one question, in one message, the folders listed
+one line each with their THE IDEA line. Read
 `notes.md` whole (QUOTES, THE PROBLEM, THE COST, WHAT THEY PAY NOW, THE IDEA, THE
 MODEL, THE NEXT STEP) and `transcript.md` for the buyer's nouns. A number appears in the
 shell only when `notes.md` carries it. Read the language off the quotes: a non-Latin
 script is one LANGUAGE line in the plan (the reference names the gap).
+
+**The cold path**, when the founder says "build the shell for <company> off my cold list",
+or the name they gave has no folder under `squad/clients/` and does have a row in
+`squad/cold-list.md`. Nobody has talked to this company, so there is no folder, no
+`notes.md`, no `transcript.md` and no quote. Read that row instead: the company, its town,
+its trade, and the one broken-thing sentence the cut carries, plus what you can see from
+outside. Every line of it is labeled an observation with the list's own `cut <date>`, and
+every fact the row does not carry is `UNKNOWN`. The folder is `squad/mep/<company>/`.
+`references/shell-shapes.md` says what each shape fills in when there are no words. A name
+in neither place is one question, asked once: which company, and off which list.
 
 **No named buyer yet** (the market-path founder, `self/` at most): build for the buyer
 type in WHO into `squad/mep/<buyer-type>/`, every buyer-specific noun a marked blank in
@@ -134,8 +151,15 @@ day lists come from the shape's section in the reference, with the buyer's nouns
 in. No XYZ line, no call question, no point
 system, no clock.
 
+**On the cold path the slice is not a quote and never wears quote marks.** The line reads
+`THE SLICE   <the row's broken-thing sentence> (observation · cold list <cut date>)`, and
+the buyer line is the row's own company, trade and town. A stranger has said nothing to
+this founder, so the label says where the sentence came from and the shape of the line says
+what it is.
+
 **STOP · GATE.** One line under the plan: "Go, or a different slice: name it, or point at
-another quote, and I rewrite this." A different slice rewrites the plan and prints it again.
+another quote, and I rewrite this." On the cold path the second half reads: point at
+another thing you can see from outside. A different slice rewrites the plan and prints it again.
 On go, append `go <date>` as the plan's last line, then build.
 
 ## Step 2 · The build
@@ -187,6 +211,9 @@ Print one line, quoted from the file, in this shape:
 It names <buyer> in 3 places: <a fact of theirs>, <their place>, "<their words>".
 ```
 
+On the cold path the third slot has no words in it. It carries the broken thing the shell
+acted on, with no quote marks and the same observation label the plan used.
+
 The page adds the plugin's box line. The open list is the boxes phase 5 actually graded
 open, in order, never a fixed list: `9 boxes: <n> closed; open: 5 (<n> slots, 0 filled),
 8, 9.` Boxes 5, 8 and 9 are open on every shell (no image files, no deploy, the button
@@ -212,5 +239,8 @@ here.
 - Never invent a number, a name or a need. A number not in `notes.md` does not appear.
   `UNKNOWN` stays `UNKNOWN` and is never a question mid-build.
 - Never paraphrase a quote. Verbatim, labeled, dated, in the language it was said.
+- Never save an observation as a quote. On the cold path nobody has said anything yet, so
+  what you can see from outside is labeled an observation and carries no quote marks, and
+  only words a person actually wrote or said are quoted.
 - One buyer, one slice, one file. The moment the shell would work for the shop next door,
   it is a template, and the founder built the wrong thing.
