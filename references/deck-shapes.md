@@ -80,7 +80,7 @@ resolved (the person, or the company on the cold path).
   alt text and a placeholder painted by CSS. The form's `action` empty, its button
   `disabled`, the plugin's line under it, the phone number as the working action when
   there is one. No `images.md`, no `images/`.
-- Skipped, said once: phase 4 (image files, the fal.ai key), phase 5 (the 9-box grade),
+- Skipped, said once: phase 4 (the image files), phase 5 (the 9-box grade),
   phase 6 (Lighthouse, analytics, redirects, the deploy) and phase 7. Those belong to the
   paid build, after the money.
 

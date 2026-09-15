@@ -7,12 +7,12 @@ description: Use this when the offer document exists and the founder needs the d
 
 Open a fresh run with this line, word for word:
 
-This skill is a base. Once you have done it your way, tell your squad "update the skill to do it like this."
+This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
 One deck for one buyer, on the one problem he said out loud, built from what the squad already
 holds. It goes on the screen at minute 40 of the sales hour, or leaves as `deck.pdf`.
 
-This skill runs in any founder's repo. Read `accent color` and `clients` off
+This agent runs in any founder's repo. Read `accent color` and `clients` off
 `.claude/squad-roots.md` when they exist; otherwise `#146ef5` and `squad/clients/`. This run
 writes no roots row.
 
