@@ -283,7 +283,7 @@ from the browser (File, Print, Save as PDF), and `deck.md`'s PDF line says so.
 
 ## A cold buyer
 
-The company came off `squad/cold-list.md` and nobody has talked to them, so `notes.md` does
+The company came off `squad/cold-list.csv` and nobody has talked to them, so `notes.md` does
 not exist. The intake is that row: the company, its town, its trade, its one broken-thing
 sentence, plus what you can see from outside (their site on a phone, their Maps listing,
 whether the booking button goes anywhere, their review count). Every line of it is labeled
