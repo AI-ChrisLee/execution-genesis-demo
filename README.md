@@ -22,7 +22,7 @@ It needs `squad/business.md` first. Run `/the-winning-offer` if you do not have 
 
 | You sell | The demo | You need |
 |---|---|---|
-| websites | the owner's site, 1 page, built for the phone | nothing |
+| websites | the owner's site, 1 page, built for the phone, with photos made in Higgsfield | a paid Higgsfield plan |
 | content | a small set of their posts and 1 clip | a paid Higgsfield plan |
 | a consulting program | the coach's program on a Notion board | the Notion connector |
 | software | the owner's tool, 3 screens you can click, with the task working | nothing |
