@@ -1,9 +1,9 @@
 ---
-name: the-demo
-description: Use this when the offer page exists and the founder wants the demo. They say "/the-demo" (it asks who the demo is for) or "/the-demo <business>, <their website or page>" (a real business, read off its page). It reads squad/business.md, connects Higgsfield or Notion when the shape needs it, builds a working first version in squad/demos/<business>/ right away, and changes it 1 note at a time until the founder says done. No deck, no deploy, no made-up facts, and it never sends anything.
+name: execution-genesis-demo
+description: Use this when the offer page exists and the founder wants the demo. They say "/execution-genesis-demo" (it asks who the demo is for) or "/execution-genesis-demo <business>, <their website or page>" (a real business, read off its page). It reads squad/business.md, connects Higgsfield or Notion when the shape needs it, builds a working first version in squad/demos/<business>/ right away, and changes it 1 note at a time until the founder says done. No deck, no deploy, no made-up facts, and it never sends anything.
 ---
 
-# The Demo
+# execution-genesis-demo
 
 The first message of a run with no `squad/demos/` folder yet opens with this line, word for word:
 
@@ -26,7 +26,7 @@ they pay. Nothing else gets written.
 - Never spend a Higgsfield credit without printing the cost and getting a yes.
 - Never the founder's price on the demo.
 - Never send. The founder records the Loom and sends the message by hand.
-- Never ask a first-run question from `CLAUDE.md` in the middle of a run. It waits until `Next: /the-close.`
+- Never ask a first-run question from `CLAUDE.md` in the middle of a run. It waits until `Next: /execution-genesis-close.`
   is printed.
 
 ## 1. Read the page
@@ -35,9 +35,9 @@ they pay. Nothing else gets written.
 to them must open. Any missing: say the agent folder was copied without its `references/`, and stop.
 
 Read `squad/business.md`: THE SENTENCE, WHO, THE PROBLEM, THE SHAPE, THE PROMISE, BUYER WORDS.
-No file: print `Run /the-winning-offer first. The demo is built off that page.` and stop.
+No file: print `Run /execution-genesis-offer first. The demo is built off that page.` and stop.
 
-Print the shape line for THE SHAPE, from the table in `references/shapes.md` (on `/the-demo` alone, as
+Print the shape line for THE SHAPE, from the table in `references/shapes.md` (on `/execution-genesis-demo` alone, as
 part of the first message in step 3). From here on, read that shape's section, plus The folder,
 Higgsfield (content and website) and The Loom.
 
@@ -56,7 +56,7 @@ Higgsfield (content and website) and The Loom.
 A business that already has a folder under `squad/demos/` holding the shape's build: open it and go to
 step 6.
 
-**`/the-demo` alone:** the first message is, in this order: the base line (first run only), the shape
+**`/execution-genesis-demo` alone:** the first message is, in this order: the base line (first run only), the shape
 line, then the shape's 1 message (the question and its facts list, together). Some messages carry lines
 filled in from `squad/business.md` or the trade row first; the shape's section says which. Then wait.
 An answer that carries a link is a real run. An answer missing what the build cannot start without
@@ -64,7 +64,7 @@ An answer that carries a link is a real run. An answer missing what the build ca
 That same line also asks for FIRST NAME when it is blank, the role of every person named with no role,
 and on software for USER. Everything else stays blank.
 
-**`/the-demo <business>, <link>`:** a real run. Read the link by the rules under A real run in
+**`/execution-genesis-demo <business>, <link>`:** a real run. Read the link by the rules under A real run in
 `references/shapes.md`: `curl -sL` first, WebFetch only when curl gives nothing. A name with no link:
 ask for the link once. A website run then looks at their current site first (Website, Their site
 first, in `references/shapes.md`).
@@ -138,4 +138,4 @@ A website adds 1 line under it: `Record it in the browser's phone view: right-cl
 When the link comes, write `LOOM <url>` as the last line of `facts.md` (a new link replaces the old
 line), then print:
 
-> Next: /the-close.
+> Next: /execution-genesis-close.

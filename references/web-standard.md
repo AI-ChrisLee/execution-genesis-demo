@@ -389,7 +389,7 @@ Find a browser, the first path that exists:
 | Linux | `google-chrome`, `chromium` or `microsoft-edge` |
 
 Make a temp folder with `mktemp -d`, never inside `squad/`, and name every file in it
-`the-demo-<business>-<screen>-<shot>`, so screens and parallel runs never overwrite each other. Chrome
+`execution-genesis-demo-<business>-<screen>-<shot>`, so screens and parallel runs never overwrite each other. Chrome
 lays a page out no narrower than 500px from the command line, so a phone shot loads the page in a 375px
 frame file and shoots a 375px window, which clips the image to the frame:
 
@@ -398,8 +398,8 @@ frame file and shoots a 375px window, which clips the image to the frame:
 ```
 
 ```
-"<browser>" --headless --hide-scrollbars --window-size=375,<height> --virtual-time-budget=5000 --screenshot=<temp>/the-demo-<business>-<screen>-375-<shot>.png "file://<temp>/the-demo-<business>-<screen>-frame-<shot>.html"
-"<browser>" --headless --hide-scrollbars --window-size=1280,800 --virtual-time-budget=5000 --screenshot=<temp>/the-demo-<business>-<screen>-1280.png "file://<full path>/index.html<#screen>"
+"<browser>" --headless --hide-scrollbars --window-size=375,<height> --virtual-time-budget=5000 --screenshot=<temp>/execution-genesis-demo-<business>-<screen>-375-<shot>.png "file://<temp>/execution-genesis-demo-<business>-<screen>-frame-<shot>.html"
+"<browser>" --headless --hide-scrollbars --window-size=1280,800 --virtual-time-budget=5000 --screenshot=<temp>/execution-genesis-demo-<business>-<screen>-1280.png "file://<full path>/index.html<#screen>"
 ```
 
 3 shots per page, and per software screen (`#s2`, `#s3` on the end of the file URL):

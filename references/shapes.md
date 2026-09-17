@@ -122,9 +122,9 @@ never shown as the buyer's facts. A program has no first screen: there THE PROBL
    1201.65 credits` counts): connected, go on. A `free` plan or 0 credits: print
    `Higgsfield needs a paid plan with credits to make the pictures.` and stop.
 2. `command not found`: run `npm i -g @higgsfield/cli` yourself. `npm` not found: print
-   `Install Node from nodejs.org, then type /the-demo again.` and stop.
+   `Install Node from nodejs.org, then type /execution-genesis-demo again.` and stop.
 3. Not signed in, or the tool was just installed: print
-   `Type ! higgsfield auth login and sign in to Higgsfield in the browser window it opens. Then type /the-demo again.`
+   `Type ! higgsfield auth login and sign in to Higgsfield in the browser window it opens. Then type /execution-genesis-demo again.`
    and stop.
 
 **The look, written once** at the top of `posts.md` (content) or `photos.md` (website) under
@@ -376,7 +376,7 @@ work below the middle of the frame, because the page's 4:5 box cuts its top.
 None of them: run `claude mcp add --transport http notion https://mcp.notion.com/mcp` yourself (`claude`
 not found: print that line for the founder to paste into a terminal in this folder), then print:
 
-> Quit Claude Code and open it again in this folder. Type /mcp, pick notion, and sign in to your Notion. Then type /the-demo again.
+> Quit Claude Code and open it again in this folder. Type /mcp, pick notion, and sign in to your Notion. Then type /execution-genesis-demo again.
 
 and stop.
 
