@@ -6,7 +6,7 @@ Builds a working demo of your offer for 1 business, so your buyer sees the thing
 pay you. It reads your offer page, builds a first version right away, and changes it 1 note at a time.
 No deck, no hosting, nothing made up, nothing sent.
 
-**Install.** The 1 line that installs every agent is on aichrislee.com/free. Paste it into Claude Code, then quit and reopen Claude Code once.
+**Install.** Installed with the one line on aichrislee.com/free. Then quit and reopen Claude Code once.
 
 ## Run
 
