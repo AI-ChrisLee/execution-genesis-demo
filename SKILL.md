@@ -1,155 +1,143 @@
 ---
-name: mep
-description: Use this when the offer document exists and the founder needs the deck for the sales hour. They say "/mep", "Build my deck.", "/mep [name]" (the name picks the folder), "build the deck for [company] off my cold list" (the cold path), or "continue the MEP". It reads squad/business.md and the buyer's own words, plans one slice, stops for go, builds the demo the model calls for, and writes deck.html, deck.md and deck.pdf into squad/mep/<name>/; nothing deploys, nothing gets a URL, nothing is invented about the buyer.
+name: the-demo
+description: Use this when the offer page exists and the founder wants the demo. They say "/the-demo" (it asks who the demo is for) or "/the-demo <business>, <their website or page>" (a real business, read off its page). It reads squad/business.md, connects Higgsfield or Notion when the shape needs it, builds a working first version in squad/demos/<business>/ right away, and changes it 1 note at a time until the founder says done. No deck, no deploy, no made-up facts, and it never sends anything.
 ---
 
-# The MEP
+# The Demo
 
-Open a fresh run with this line, word for word:
+The first message of a run with no `squad/demos/` folder yet opens with this line, word for word:
 
-This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
+> This agent is a base. Once you have done it your way, tell your squad "update the agent to do it like this."
 
-One deck for one buyer, on the one problem he said out loud, built from what the squad already
-holds. It goes on the screen at minute 40 of the sales hour, or leaves as `deck.pdf`.
-
-This agent runs in any founder's repo. Read `accent color` and `clients` off
-`.claude/squad-roots.md` when they exist; otherwise `#146ef5` and `squad/clients/`. This run
-writes no roots row.
+1 output: a working demo of the founder's offer, built for 1 business, in `squad/demos/<business>/`
+(and, for a program, on a board in the founder's own Notion). The buyer sees the thing working before
+they pay. Nothing else gets written.
 
 ## Never
 
-Read this block every run.
+- Never a deck, slides or a PDF.
+- Never deploy it, host it, or give it a URL or a domain.
+- Never log into, post to, or write in the buyer's accounts (their site, their Instagram, their Notion,
+  their Google listing) before they pay. The demo lives in the founder's folder and the founder's Notion.
+- Never make up a fact: a name, number, price, date, review, rating, testimonial, year, award or client.
+  A fact nobody gave stays blank.
+- Never a real person's face, a logo, or readable text in a generated image. Never upload the buyer's photos.
+- Never spend a Higgsfield credit without printing the cost and getting a yes.
+- Never the founder's price on the demo.
+- Never send. The founder records the Loom and sends the message by hand.
+- Never ask a first-run question from `CLAUDE.md` in the middle of a run. It waits until `Next: /the-close.`
+  is printed.
 
-- Never send, never deploy. Nothing on the buyer's domain, in his name or on his accounts until
-  the money clears; the reference's Not in any deck holds the full list. Production happens
-  after the money.
-- Never price past `squad/business.md`. The founder's price is on no slide, and neither is any
-  number worked out from it. The only money on a slide is the buyer's own: what the problem
-  costs him off `notes.md`, the prices in his own services table inside the capture, or the
-  plugin's `quote only`.
-- Never invent a number, a name or a need. A number appears only when `notes.md` carries it, or
-  the founder typed it at the plugin's yes. `UNKNOWN` stays `UNKNOWN`, never a question
-  mid-build. A cost no call gave is a dropped slide, never a guess.
-- Never invent a screenshot or a quote. A capture is of the page that exists; a slide with no
-  capture yet carries a labeled hole. A quote is verbatim, labeled, dated, in the language it
-  was said. Never save an observation as a quote.
-- One buyer, one slice, one deck. The moment it would work for the shop next door, it is a
-  template.
-- Every readable word in Inter, one subject per slide, nothing on a slide that `notes.md`, the
-  offer document or the founder's yes did not give.
-- Nothing else gets written. It all lands in `squad/mep/<name>/`, lowercased and hyphenated,
-  matching his folder under `squad/clients/`.
+## 1. Read the page
 
-## The read
+`references/shapes.md`, `references/no-slop.md`, `references/web-standard.md` and the 4 CSV files next
+to them must open. Any missing: say the agent folder was copied without its `references/`, and stop.
 
-`references/deck-shapes.md` and `references/deck-cage.css` must open. Either missing: say to run
-the install paste again, and stop.
+Read `squad/business.md`: THE SENTENCE, WHO, THE PROBLEM, THE SHAPE, THE PROMISE, BUYER WORDS.
+No file: print `Run /the-winning-offer first. The demo is built off that page.` and stop.
 
-`squad/business.md`: THE SENTENCE, THE MODEL, WHO, THE STACK, PRICE. No `confirmed <date>` stamp
-is fine. THE MODEL, with THE STACK when it is agency, picks the demo by the reference's table,
-never a question. No file: say so in one line, name the Winning Offer (g4 warm, g5 cold), stop.
+Print the shape line for THE SHAPE, from the table in `references/shapes.md`. From here on, read that
+shape's section, plus The folder and The Loom.
 
-The buyer: the name in `/mep <name>`, else the one folder under `squad/clients/`, else the
-folder whose `notes.md` was written last. Neither: say so in one line, name g4, stop. Read his
-`notes.md` (THE COST decides the cost slide, and a question written there is not a cost) and
-`transcript.md` for his nouns.
+## 2. Connect first
 
-The renderer: Chrome or Edge at the reference's paths, and remember which answered. None: say so
-once, never ask for an install.
+Only when the shape needs it.
 
-## The plan
+- **Content:** Higgsfield, by the 3 steps under Connect in the Content section of `references/shapes.md`.
+  Those steps decide go on or stop.
+- **Consulting program:** Notion. Tools ending in `notion-create-database`, `notion-create-view` and
+  `notion-create-pages` exist in this session, loaded or deferred: go on. Deferred: load them, plus
+  `notion-fetch`, `notion-update-page`, `notion-update-view` and `notion-update-data-source`, in 1 tool
+  search. None of them: the steps under Connect in the Consulting program section, and this run stops.
+- **Website and software:** nothing to connect. Skip this step without a word.
 
-Write `squad/mep/<name>/plan.md`:
+## 3. Who it is for
 
-```
-# MEP · <buyer name>
+A business that already has a folder under `squad/demos/` holding the shape's build: open it and go to
+step 6.
 
-THE BUYER   <name>, <what they do>, <their town>
-THE SLICE   "<the one problem, in his words>" (<the label notes.md gives it>)
-THE MODEL   <agency | consulting | software>
-THE DEMO    <the site: 3 captures | the piece beside his | the structure | 3 screens>
-```
+**`/the-demo` alone:** print the shape's 1 message (the question and its facts list, together) and
+wait. Some messages carry a line filled in from `squad/business.md` first; the shape's section says
+which. An answer that carries a link is a real run. An answer missing what the build cannot start
+without, ask for those once, in 1 line, and wait:
 
-The slice is the strongest problem line in `notes.md`, verbatim, with its label. Print the path
-and those 4 lines. Wrong problem: the founder points at another line and it rewrites. On go, build.
+- website: 1 service, and PHONE or ACTION
+- content: SETTING and 1 TOPIC
+- consulting program: PROGRAM, the stages with what the client does in each, and a client in every stage
+- software: 3 RECORDS. FIRST SCREEN and TASK come from THE SENTENCE, and a task tool's CHECK (what goes
+  wrong in the task) from THE PROBLEM, when the founder did not give them, source `squad/business.md`.
 
-## The demo
+That same line also asks for FIRST NAME when it is blank, and on software for USER. Everything else
+stays blank.
 
-Read the demo's section in `references/deck-shapes.md` and follow it.
+**`/the-demo <business>, <link>`:** a real run. Read the link by the rules under A real run in
+`references/shapes.md`: `curl -sL` first, WebFetch only when curl gives nothing. A name with no link:
+ask for the link once.
 
-**The site** (agency). The `execution-design` plugin builds it. Missing: print these 2 lines,
-say to paste them and then type "continue the MEP", and stop. It carries on at the demo.
+Then write `squad/demos/<business>/facts.md` and `notes.md` (The folder, in `references/shapes.md`):
+1 line per fact with its source, every field nobody gave under `## Blank`. A blank never gets filled
+with something that sounds nice.
 
-```
-/plugin marketplace add AI-ChrisLee/execution-design
-/plugin install execution-design@execution-design
-```
+## 4. The skeleton, right away
 
-Phases 1, 2 and 3 only, at `squad/mep/<name>/`: the brief pre-filled off the offer document and
-`notes.md` with every unknown fact `UNKNOWN`, printed for one yes; 1 pick of 3 directions before
-anything is built; one `index.html`, the plugin's `client.md` beside it, with the form's action
-empty and its button disabled under the plugin's own line. Phases 4 to 7 are the paid build,
-after the money; say that in one line.
-Then `shot-1.png`, `shot-2.png` and `shot-3.png` at 1920x1080 the way the reference says. No
-renderer: name those 3 files for the founder to shoot by hand, and build the deck anyway.
+Build the shape's skeleton from `references/shapes.md` now. No plan, no pick, no question.
+THE PROBLEM and BUYER WORDS decide what goes first.
 
-**The piece** (agency, content). One paste: his current piece and its channel. Then `piece.md`,
-his as posted, then the piece in his voice on the slice. Text only.
+- **Website:** 1 `index.html` by `references/web-standard.md` (Website).
+- **Content:** write The look lines and the 5 prompts, get the cost of each, print the cost line for
+  the whole set, and wait for yes. On yes, make the set in the order under The make, then write
+  `posts.md` and `index.html`.
+- **Consulting program:** the 6 Notion calls, in order, then `board.md`.
+- **Software:** 1 `index.html` with 3 screens by `references/web-standard.md` (Software), the task or
+  the conversation working inside the page.
 
-**The structure** (consulting). His columns, his facts from `notes.md` as rows, 5 at most, drawn
-on slides 5, 6 and 7.
+## 5. The no-slop check
 
-**The screens** (software). 3 screens carrying his real nouns, one flow, the money button
-disabled with one line under it saying nothing is wired.
+Before the founder sees anything, run the items `references/no-slop.md` gives this shape (What runs on
+each shape). Website, software and the content feed also get The look (`references/web-standard.md`).
+A program gets The board. Fix every fail and run the check again. Never show the demo with a note
+about what is wrong.
 
-## The deck
+## 6. Show it, 1 note at a time
 
-`deck.html` from the reference's skeleton, with the accent line under the cage CSS: the first
-hex on the roots file's `accent color` row, `#146ef5` when that row is missing or carries no
-bare hex.
+Open the demo once: `index.html` in the browser (`open` on a Mac, `start` on Windows, `xdg-open` on
+Linux), or print the Notion link and open it. On a real or a made-up run, list the fields under
+`## Blank` in 1 line, and name first any blank the trade row's `Watch Out` needs
+(`Blank: new patient offer, years open, rating.`). No blanks: no line. Then print:
 
-9 slides, the spine in the reference. 8 when `notes.md`'s THE COST carries no number and no
-words of his: the cost slide is dropped, and `deck.md` says so.
+> Give me 1 note: what would they notice first that's wrong?
 
-Under every image on a slide, one short line: a `.note` under the card, above the rail, 8 words
-at most. It wins over the reference's "the capture and nothing else". Slide 1's cover already
-carries his town in `.sub`; that is its line.
+Each note:
 
-`deck.md`: what the founder says over each slide, one row per slide that exists, his own voice,
-no price of the founder's. It ends on the PDF line, and the reference's `looked <date>` last
-line is not written.
+1. Change only what the note names. Nothing next to it gets rebuilt.
+2. A note that needs a fact nobody gave: ask for that 1 fact, then add it to `facts.md` with its source.
+3. Content: a redo prints its credit cost and waits for yes.
+4. Run the no-slop check on what changed, with The look or The board.
+5. Say what changed in 3 lines or fewer, then `Reload the tab.` The first show is the only `open`.
+6. Add 1 row to `notes.md`: `round · note · what changed · date`.
+7. Print the note line again.
 
-`deck.pdf` when Chrome or Edge answered, by the reference's print command. None: `deck.md`'s PDF
-line says print from the browser, File, Print, Save as PDF, one slide per page.
+Repeat until the founder says done.
 
-Open `deck.html` in the browser. Say what got written, one line per file.
+## 7. Done
 
-## The look
+Print the template test, quoted from the demo:
 
-Print one line, quoted from the deck:
+> It names <name> in 3 places: <a fact of theirs>, <their place>, "<their words>".
 
-```
-It names <buyer> in 3 places: <a fact of his>, <his place>, "<his words>".
-```
+<their place> is TOWN, ADDRESS, NEAR, AREA or SETTING. A program or a tool with no place: their NAME
+where it heads the page or the top bar, and <a fact of theirs> is the program name, a stage name, a
+staff name or a service. No words of theirs on `facts.md`: the third is another fact of theirs,
+without quote marks. Anything on the demo that would read the same for the next business in the trade
+gets fixed first, logged as a round in `notes.md`, and then the line is printed.
 
-Then ask once: name anything that would read the same for anyone else in his trade. Each one is
-fixed in the deck and in the demo file it came from; a fix in `index.html` is not on the deck
-until its shot is retaken, and the PDF with it.
+Then print:
 
-Done: it goes on the screen at minute 40, or leaves as `deck.pdf`, sent by the founder's hand.
+> Record a Loom under 2 minutes over the open demo, face on, and paste me the link.
 
-## Resuming
+A website adds 1 line under it: `Record it in the browser's phone view: right-click the page, Inspect, then the phone icon.`
 
-"continue the MEP" picks a stopped run back up; any other re-run starts at the read. Both key on
-the files in `squad/mep/<name>/`, never on a session's memory: continue at the first one missing.
-No `plan.md`, the read. A plan and no demo, the demo on "continue the MEP" (go was already said);
-on any other trigger, print the plan and wait for go. The demo whole and no deck, the deck. A deck, the look. Never re-ask a
-yes the files already show, and never rebuild a file that opens.
+When the link comes, write `LOOM <url>` as the last line of `facts.md` (a new link replaces the old
+line), then print:
 
-## The cold path
-
-"build the deck for <company> off my cold list", or a name with no folder under `squad/clients/`
-that has a row on `squad/cold-list.csv`. Read that row instead of a folder, into
-`squad/mep/<company>/`. Every line off it is labeled `(observation · cold list <cut date>)` and
-carries no quote marks. Nobody has talked to this company, so the cost slide is dropped.
-`references/deck-shapes.md` (A cold buyer) says what each slide does when there are no words.
+> Next: /the-close.
