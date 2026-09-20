@@ -7,7 +7,7 @@ Higgsfield (content and website) and The Loom, which hold for every shape.
 |---|---|---|---|
 | website | You sell websites, so the demo is the owner's site, 1 page, built for the phone, with photos made in Higgsfield. | Higgsfield | `photos.md`, `media/`, `index.html` |
 | content | You sell content, so the demo is a small set of their posts, made in Higgsfield. | Higgsfield | `media/`, `posts.md`, `index.html` |
-| consulting program | You sell a program, so the demo is the coach's program on a Notion board. | Notion | `board.md` and the board in the founder's Notion |
+| consulting program | You sell a program, so the demo is the coach's dashboard in Notion: a client board and a guide board. | Notion | `board.md` and the dashboard in the founder's Notion |
 | software | You sell software, so the demo is the owner's tool, 3 screens you can click. | nothing | `index.html` |
 
 No `## THE SHAPE` heading, or a word that is not 1 of the 4: read THE SENTENCE and pick by what the
@@ -408,58 +408,110 @@ founder's page.
   written as LENGTH `<N> weeks`) is allowed.
 
 **Real, off their page:** program name, stages, length and promise off the sales page. Clients are never
-real people: 2 cards per stage, named `Sample client 1` and on, source `sample`, DONE `none`, with no Due
-column and no problem property.
+real people: 4 cards per stage, made-up full names, source `sample`, with no problem property.
 
-**Files:** `facts.md`, `notes.md`, `board.md`. The board itself lives in the founder's Notion.
+**Files:** `facts.md`, `notes.md`, `board.md`. The dashboard itself lives in the founder's Notion.
 
-**The skeleton, in this order.** Calls 1 and 2 may run in 1 message. Call 3 finishes before call 4
-starts: `notion-create-view` adds its board to the end of the page, so the board sits above the stage
-links only when it lands first.
-1. `notion-create-pages`: 1 page, `creation_mode` draft, title `<PROGRAM>`. Content, 2 lines off
-   `facts.md`: `<NAME> · <FOR> · <LENGTH>`, then PROMISE word for word as a quote (`> <PROMISE>`). A
-   blank field is left off its line.
-2. `notion-create-database`: no parent, so the database never sits on the demo page as its own link.
-   Title `<PROGRAM> clients`. Schema
-   `CREATE TABLE ("Client" TITLE, "Stage" SELECT('<stage 1>':gray, '<stage 2>':blue, '<stage 3>':yellow, '<stage 4>':green), "This week" RICH_TEXT, "Due" DATE)`,
-   1 option per stage, in order (more than 4 stages: the next colours are orange, purple, pink). The
-   problem property joins the schema when item 4 asked for it (`"Next call" DATE` or `"Paid" CHECKBOX`).
-   Leave out a DATE column unless every client has its line. Keep the data source ID it returns. With no
-   parent, `<PROGRAM> clients` shows in the founder's Private sidebar next to the demo page. That is
-   expected; leave it.
-3. `notion-create-view`: `parent_page_id` the page from call 1, that `data_source_id`, type `board`,
-   name `<PROGRAM>`, configure `GROUP BY "Stage"; SHOW "Client", <the problem property>, "This week", "Due"`
-   (each once, and leave out any column call 2 left out).
-4. `notion-create-pages`: parent the page from call 1, 1 page per stage, title `<N>. <STAGE N NAME>`.
-   <N> is the stage's place in the founder's order and passes the facts rule. Content: `### What you do`,
-   each thing in STAGE N DOES as an unchecked to-do (`- [ ] <thing>`), then `### You walk out with`, then
-   STAGE N WALKS OUT WITH on its own line. A blank field's block is left off. Keep each page URL.
-5. `notion-create-pages`: parent the data source, 1 card per client. Properties: Client; Stage; This
-   week (the first thing of that stage's DOES that is not on the client's DONE line, as written; every
-   thing done: that stage's WALKS OUT WITH); Due (the client's DUE); the problem property. The card's
-   page holds that stage's DOES as to-dos, the things on DONE N checked (`- [x]`) and the rest unchecked,
-   then the line `Walks out with: <WALKS OUT WITH>`, and a link to its stage page from call 4. Never
-   repeat Stage, This week, Due or the problem property as text lines, because the properties show them.
-6. `notion-fetch` the page from call 1 and keep the inline board's database URL.
-7. `notion-create-view`: `database_id` that URL, `data_source_id` from call 2, type `calendar`, named
-   for its date (`Next calls` when there is a Next call column, else `Due`), configure
-   `CALENDAR BY "<that column>"`. No DATE column, or a refused call: skipped, and the board ships alone.
-8. `notion-fetch` the page, the view and 1 card, then run The board in `references/no-slop.md`.
+---
+
+### What the dashboard is
+
+TWO inline databases on 1 page, not a page of links. The worked example, built 2026-09-20 and the bar
+for this shape:
+
+1. **Clients** · a board grouped by Stage. 1 card per client, 4 per stage, every card a real-looking
+   person with a page icon. This answers "where is everyone".
+2. **The program** · a board grouped by Stage, sorted by Order. 5 or 6 guide cards per stage, so 20 to
+   24 in all. Every card opens to why that step sits where it does, a checklist, and what done looks
+   like. This answers "what do I actually do".
+
+A flat list of 4 stage pages is NOT this shape. The stages are columns on the program board, and the
+guides are the cards inside them.
+
+### Icons, on every page
+
+`icon` is a top-level parameter on `notion-create-pages` and `notion-update-page`, a sibling of
+`properties`, never a property inside it. An emoji in the title text instead of the icon leaves the
+grey default document sheet on the card and is wrong.
+- Client cards: a person emoji, skin tones and genders varied across the roster (`👩🏾`, `👨🏽`, `👩🏼`,
+  `👨🏿`). Never the same 1 twice in a row down a column.
+- Guide cards: an emoji for the thing itself (`🪪` a licence, `📞` a call, `🔥` a warm lead, `🚫` a
+  don't).
+- The page itself: 1 emoji for the program.
+
+### Client cards read like a coach's notes
+
+This is what separates this shape from a template. `This week` is never the stage's generic line
+repeated down the column. It says where THAT person is inside the stage, in the coach's voice:
+- `31 of 50 called. 4 warm so far.`
+- `Stuck on which CRM. Told him to pick 1 and stop looking.`
+- `First offer rejected on price. Going again Thursday.`
+- `Accepted. Inspection Monday, closing 4 weeks out.`
+
+So the board shows progress INSIDE a column, not only which column. On a made-up run, vary it: some
+starting, some most of the way, 1 stalled, 1 nearly done. On a real run it comes off DONE N and nothing
+is invented.
+
+Clients get full names (`Danielle Okafor`), never `Sample client 1`.
+
+### The schema, verified
+
+`notion-create-database` takes `{parent, title, schema}` and `schema` is a STRING in this syntax, NOT a
+JSON object. Column names in double quotes, type keyword after a space, select options in single quotes:
+
+```
+("Client" title, "Stage" select('Setup', 'Sphere', 'Open houses', 'First deal'), "Next call" date, "This week" rich_text, "Walks out with" rich_text)
+```
+
+Type keywords are Notion's own: `title`, `rich_text` (not `text`), `date`, `number`, `select`,
+`checkbox`. Option colours are NOT part of this string; set them after with
+`notion-update-data-source`, and if the chips stay grey, leave them grey rather than retrying.
+
+### The build
+
+Calls 1 and 2 may run in 1 message.
+
+1. `notion-create-pages`: 1 page, title `<PROGRAM>`, `icon` 1 emoji. Content: `<NAME> · <FOR> ·
+   <LENGTH>`, then PROMISE word for word as a quote (`> <PROMISE>`). A blank field is left off its line.
+2. `notion-create-database` twice, `parent` the page from call 1 both times. Keep both the database URL
+   and the data source id each returns.
+   - `Clients`, schema as above, with the problem property added when item 4 asked for it.
+   - `The program`, schema
+     `("Guide" title, "Stage" select(<the same stages>), "Week" rich_text, "Done when" rich_text, "Order" number)`
+3. `notion-create-view` on each: `database_id` and `data_source_id` from call 2, type `board`, name
+   `By stage`, `group_by` `Stage`. The program also gets `sorts`
+   `[{"property": "Order", "direction": "ascending"}]` so its guides run in sequence inside a column.
+4. `notion-create-pages` into the Clients data source: 1 card per client, each with an `icon`.
+   Properties: Client (full name); Stage; This week (that person's real position, per above); Due; the
+   problem property. Never repeat Stage, This week or Due as text in the body, the properties show them.
+5. `notion-create-pages` into The program data source, in batches of 6, 1 per guide, each with an
+   `icon`. Properties: Guide (the step, no emoji in the text); Stage; Week; Order 1 to 6; Done when (1
+   sentence you could check). Content, in this order:
+   - 1 short bold line on WHY this sits here, or what it costs to skip it
+   - the checklist, `- [ ] <thing>` off STAGE N DOES
+   - Every stage gets at least 1 card that is not a task: what this stage does NOT include, or what it
+     feels like when it is going badly. That card is what makes it read as a coach and not a checklist.
+6. `notion-update-page` on the page from call 1, `replace_content`, laying it out: the heading, the
+   2 lines and the promise, `## 👥 Clients` with the Clients database embedded
+   `<database url="<url>" inline="true" />`, `## 🗺️ The program` with the program database embedded the
+   same way, then a small table of the stages against what each one walks out with.
+7. `notion-fetch` the page, 1 client card and 1 guide card, then run The board in `references/no-slop.md`.
+
+`allow_deleting_content` on `notion-update-page` does not serialise as a boolean through this tool. So
+lay the page out in call 6 BEFORE anything is nested under it, or keep the child pages in `new_str`.
 
 **The problem property:** THE PROBLEM picks which property sits right under Client on the card face.
 Stalled work: This week. Calls or meetings: Next call. Payments: Paid, the only property added for the
 problem. Picking This week from DONE N is a choice among `facts.md` lines, not a made-up value.
 
-**`board.md`:** the columns in order, each card with its properties and page text, the stage pages, the
-calendar tab when there is one, and the Notion link last.
+**`board.md`:** both boards, their columns in order, each card with its properties and page text, and the
+Notion link last.
 
 **Show:** print the link to the page from call 1 and open it in the browser.
 
-**Note rounds:** `notion-update-page` changes a card, a stage page, or the page's lines.
-`notion-create-pages` adds a card or a stage page. `notion-update-view` changes the card face (SHOW),
-the sort or the view name. `notion-update-data-source` adds, drops or renames a column. A missing column
-is a stage with fewer than 2 cards: ask for the client first names, then add the cards. Nothing gets
-rebuilt that the note did not name.
+**Note rounds:** `notion-update-page` changes a card or the page's lines. `notion-create-pages` adds a
+card. `notion-update-view` changes the card face, the sort or the view name. `notion-update-data-source`
+adds, drops or renames a column. Nothing gets rebuilt that the note did not name.
 
 **Tools:** the Notion connector. **Cost line:** none.
 
