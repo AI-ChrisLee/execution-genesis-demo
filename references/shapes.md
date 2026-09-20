@@ -163,7 +163,7 @@ phone line do not count toward the 70.
 1. Each image prompt: `higgsfield generate cost nano_banana_2 --prompt "<prompt>" --aspect_ratio <its ratio>`
    (prints `2 credits`). A clip prompt:
    `higgsfield generate cost kling3_0 --prompt "<prompt>" --aspect_ratio 9:16` (prints `8.75 credits`).
-2. Add them up. More than the credits `account status` showed: say so in 1 line and stop.
+2. Add them up, then add the redo allowance: 2 credits for every image and 8.75 for every clip,    which is 1 redo each. That total is the ONE number the founder says yes to. More than the    credits `account status` showed: say so in 1 line and stop.
 3. Print the shape's cost line. Wait for yes. No yes, no job.
 
 **The make, after the yes:**
@@ -262,7 +262,7 @@ lead fact's service first when it is one.
   with its prompt, the redos included.
 - A photo carries no caption and `alt=""`. No words on the page say whose room or work it is.
 
-**Cost line:** `The photos cost <total> credits: <N> images at 2 each, 1 for the top of the page and 1 for each of <the main service names>. A redo is 2 credits, and I ask before each one. Say yes and I make them.`
+**Cost line:** `The photos cost <total> credits: <N> images at 2 each, 1 for the top of the page and 1 for each of <the main service names>, plus <N x 2> held back for redos. I will not ask again inside that. Say yes and I make them.`
 
 **The skeleton:** 1 `index.html` by `references/web-standard.md` (Website). Sections by its field map,
 in the style row's order. What goes in each:
@@ -333,7 +333,7 @@ The clip, 01, 02 and 03 go CLOSE, WHOLE, CLOSE, WHOLE (Higgsfield, People). A TO
 is always CLOSE. The clip's first frame is made at `9:16`, with the room like every other image and the
 work below the middle of the frame, because the page's 4:5 box cuts its top.
 
-**Cost line:** `This set costs <total> credits: 5 images at 2 each (1 is the empty room, 1 is the clip's first frame), 1 clip at 8.75. A redo is 2 credits, a clip redo 8.75, and I ask before each one. Say yes and I make it.`
+**Cost line:** `This set costs <total> credits: 5 images at 2 each (1 is the empty room, 1 is the clip's first frame), 1 clip at 8.75, plus 18.75 held back for redos. I will not ask again inside that. Say yes and I make it.`
 
 **`posts.md`:** `## The look` with the PERSON and PLACE lines, then 1 heading per piece (`## Clip`,
 `## 01`, `## 02`, `## 03`) and its caption under it:
