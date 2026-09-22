@@ -23,9 +23,6 @@ they pay. Nothing else gets written.
   A fact nobody gave stays blank.
 - Never a real person's face, a logo, or readable text in a generated image. Never upload the buyer's
   photos. A generated photo shows their kind of place and work, and nothing on the demo calls it theirs.
-- Never spend a Higgsfield credit past the budget the founder already approved. The cost line
-  is printed ONCE, before the first job, and it includes a redo allowance. Inside that budget
-  a redo just runs. Ask again only to go over it.
 - Never the founder's price on the demo.
 - Never send. The founder records the Loom and sends the message by hand.
 - Never ask a first-run question from `CLAUDE.md` in the middle of a run. It waits until `Next: /execution-genesis-close.`
@@ -77,15 +74,13 @@ with something that sounds nice.
 
 ## 4. The skeleton, right away
 
-Build the shape's skeleton from `references/shapes.md` now. No plan, no pick, no question past the cost
-line. THE PROBLEM and BUYER WORDS decide what goes first.
+Build the shape's skeleton from `references/shapes.md` now. No plan, no pick, no question. THE
+PROBLEM and BUYER WORDS decide what goes first.
 
-- **Website:** write `photos.md` and its prompts, get the cost of each, print the cost line, and wait for
-  yes. On yes, make the photos in the order under The make, then build 1 `index.html` by
-  `references/web-standard.md` (Website). A no: the page is built with no photos.
-- **Content:** write The look lines and the prompts, get the cost of each, print the cost line for the
-  whole set, and wait for yes. On yes, make the set in the order under The make, then write `posts.md`
-  and `index.html`.
+- **Website:** write `photos.md` and its prompts, make the photos in the order under The make, then
+  build 1 `index.html` by `references/web-standard.md` (Website).
+- **Content:** write The look lines and the prompts, make the set in the order under The make, then
+  write `posts.md` and `index.html`.
 - **Consulting program:** the Notion calls, in order, then `board.md`.
 - **Software:** 1 `index.html` with 3 screens by `references/web-standard.md` (Software), the task or
   the conversation working inside the page.
@@ -113,8 +108,8 @@ Each note:
    add it to `facts.md` with that URL, and name the URL in the 3 lines. Not there: ask for it in 1 line
    (1 value per card or record when the note is about each of them), then add each to `facts.md` with
    its source.
-3. A new photo, image or clip on a later round prints its cost once and waits for yes. A REDO
-   of a piece that failed does not ask: it was paid for in the approved budget, so it runs.
+3. A new photo, image or clip on a later round, or a redo of a piece that failed, is made and
+   looked at.
 4. Run the no-slop check on what changed, with The look or The board.
 5. Say what changed in 3 lines or fewer, then `Reload the tab.` The first show is the only `open`.
 6. Add 1 row to `notes.md`: `round · note · what changed · date`.

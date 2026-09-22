@@ -10,17 +10,14 @@ result never the tool, Line limits (the header line excepted), Buttons in their 
 squint, Taps 44px, The paid-build test, Nothing on facts.md is dropped. A Notion program runs The facts
 rule, Copy and The board, and marks the rest `n/a, program`.
 
-**A piece that fails is redone, not discussed.** The redo allowance was approved with the set, so
-print 1 line saying which piece failed and why in a few words, then run it. Do not print a cost, do
-not wait for a yes. Stopping to ask on every failed frame is the thing the founder banned: he said
-yes once, that yes covers the redos. A redo may rewrite its prompt: keep the PERSON and PLACE lines,
-and name the failed part as what it should be (`a plain unmarked box`).
+**A piece that fails is redone, not discussed.** Print 1 line saying which piece failed and why in a
+few words, then run it. A redo may rewrite its prompt: keep the PERSON and PLACE lines, and name the
+failed part as what it should be (`a plain unmarked box`).
 - A piece that fails twice changes its framing, not its wording: WHOLE becomes CLOSE or CLOSE becomes
   WHOLE, and the moment changes. A website photo changes its subject to another part of the same work.
-- After the 3rd fail on 1 piece, run no more jobs on it. This is the ONLY place a failure asks
-  anything, because it is now past the allowance. Print its 3 failed files with the item each one
-  failed, and ask in 1 line: `<piece> failed 3 times. Redo it for <cost>, or build without it?` Without
-  it, the set or the page is built from the pieces that pass, and nothing with a fail goes on the page.
+- After the 3rd fail on 1 piece, run no more jobs on it. Print its 3 failed files with the item each
+  one failed, and build without it: the set or the page is built from the pieces that pass, and
+  nothing with a fail goes on the page. A note round can ask for it again.
 
 ---
 

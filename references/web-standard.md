@@ -21,8 +21,8 @@ takes The lookup, Tokens, Type, Colour, Layout and The look. The 4 CSV files sit
 4. A real website run reads their brand colour off their home page: a `theme-color` meta tag, else the
    most used colour on its buttons in the CSS that is not a grey. When a `palettes.csv` row with the same
    `Mode` as the style's palette has its Accent in the same colour family (green, blue, red, orange,
-   yellow, purple or brown), take that row instead of the style's Palette ID, and say so in 1 line before
-   the cost line. No match: the style's Palette ID.
+   yellow, purple or brown), take that row instead of the style's Palette ID, and say so in 1 line. No
+   match: the style's Palette ID.
 
 Copy the values out of the files. Never type a hex or a font name from memory. No 3 directions, no
 question to the founder.

@@ -159,18 +159,11 @@ phone line do not count toward the 70.
   height, made at `4:5`.
 - Never ask the model in words to crop at the shoulders or the knees. It ignores that.
 
-**The cost, before any job:**
-1. Each image prompt: `higgsfield generate cost nano_banana_2 --prompt "<prompt>" --aspect_ratio <its ratio>`
-   (prints `2 credits`). A clip prompt:
-   `higgsfield generate cost kling3_0 --prompt "<prompt>" --aspect_ratio 9:16` (prints `8.75 credits`).
-2. Add them up, then add the redo allowance: 2 credits for every image and 8.75 for every clip,    which is 1 redo each. That total is the ONE number the founder says yes to. More than the    credits `account status` showed: say so in 1 line and stop.
-3. Print the shape's cost line. Wait for yes. No yes, no job.
-
-**The make, after the yes:**
+**The make:**
 1. The room first, with nobody in it: `media/place` (content) or `media/hero` (website).
    `higgsfield generate create nano_banana_2 --prompt "<the PLACE line, nobody in it, the phone line>" --aspect_ratio <9:16 content, 4:5 website> --wait`.
-   Look at it (`references/no-slop.md`, Generated images). A fail gets its redo, with its cost and a
-   yes, before anything else is made.
+   Look at it (`references/no-slop.md`, Generated images). A fail gets its redo before anything else
+   is made.
 2. Then every other image at the same time, each with `--image media/<that room>.<ending>`, so the room
    carries over. The person carries over from the PERSON line. Never pass a piece with a person in it as
    `--image`, because the model copies its whole framing into every later piece.
@@ -182,6 +175,8 @@ phone line do not count toward the 70.
   `sips -Z 1600 -s format jpeg media/<name>.png --out media/<name>.jpg`). No resize tool: the downloaded
   file goes on the page.
 - Look at every file before it goes on the page. A fail follows the redo rule in `references/no-slop.md`.
+- After the round's last job, run `higgsfield account status` again and print `Used <n> credits. <m>
+  left.`, the credits off the 2 status reads, the redos included.
 
 ---
 
@@ -262,8 +257,6 @@ lead fact's service first when it is one.
   with its prompt, the redos included.
 - A photo carries no caption and `alt=""`. No words on the page say whose room or work it is.
 
-**Cost line:** `The photos cost <total> credits: <N> images at 2 each, 1 for the top of the page and 1 for each of <the main service names>, plus <N x 2> held back for redos. I will not ask again inside that. Say yes and I make them.`
-
 **The skeleton:** 1 `index.html` by `references/web-standard.md` (Website). Sections by its field map,
 in the style row's order. What goes in each:
 1. Hero: the name line, the H1, the second line, the money action, the hero photo and the visit card
@@ -332,8 +325,6 @@ clip is the TOPIC closest to THE PROBLEM (none closer: TOPIC 1), at a different 
 The clip, 01, 02 and 03 go CLOSE, WHOLE, CLOSE, WHOLE (Higgsfield, People). A TOPIC that is a hands job
 is always CLOSE. The clip's first frame is made at `9:16`, with the room like every other image and the
 work below the middle of the frame, because the page's 4:5 box cuts its top.
-
-**Cost line:** `This set costs <total> credits: 5 images at 2 each (1 is the empty room, 1 is the clip's first frame), 1 clip at 8.75, plus 18.75 held back for redos. I will not ask again inside that. Say yes and I make it.`
 
 **`posts.md`:** `## The look` with the PERSON and PLACE lines, then 1 heading per piece (`## Clip`,
 `## 01`, `## 02`, `## 03`) and its caption under it:
@@ -513,7 +504,7 @@ Notion link last.
 card. `notion-update-view` changes the card face, the sort or the view name. `notion-update-data-source`
 adds, drops or renames a column. Nothing gets rebuilt that the note did not name.
 
-**Tools:** the Notion connector. **Cost line:** none.
+**Tools:** the Notion connector.
 
 ---
 
@@ -618,7 +609,7 @@ Time, Visit, Insurance, Reason, Status, Amount. A status word goes only on a rec
 says it, or on a live row as `Answered`. When the agent does TASK, screen 2's title is the record
 (`<first name>, <when>`), never an order over a job already done. Open the file in the browser.
 
-**Tools:** none. **Cost line:** none. It costs nothing past the Claude plan.
+**Tools:** none. It costs nothing past the Claude plan.
 
 ---
 
