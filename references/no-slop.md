@@ -140,7 +140,9 @@ failed part as what it should be (`a plain unmarked box`).
       nothing, a headline with 1 word alone on its last line. The call bar and the money section's button
       are 1 action and pass. The nav's current tab naming its own screen passes.
 - [ ] **The paid-build test.** Website: on the phone slices and the 1280x800 shot, count the filled
-      sections between the hero and the money section. Fewer than 3 fails, and so does any section with 1
+      sections between the hero and the money section. Fewer than 3 fails. Fewer than `winner.md`'s
+      `Sections before the money action`, less the winner sections named on the blanks line, fails too:
+      the buyer has seen the winner, and a shorter page reads as less. So does any section with 1
       item under its heading. Fold the thin section (`references/web-standard.md`, Website, Sections), and
       name the missing Section Order facts first on the blanks line. A page that reads as a contact card
       fails even when every other item passes. Software: screen 1 holds every record on `facts.md` but the

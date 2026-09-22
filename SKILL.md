@@ -1,6 +1,6 @@
 ---
 name: execution-genesis-demo
-description: Use this when the offer page exists and the founder wants the demo. They say "/execution-genesis-demo" (it asks who the demo is for) or "/execution-genesis-demo <business>, <their website or page>" (a real business, read off its page). It reads squad/business.md, connects Higgsfield or Notion when the shape needs it, builds a working first version in squad/demos/<business>/ right away, and changes it 1 note at a time until the founder says done. No deck, no deploy, no made-up facts, and it never sends anything.
+description: Use this when the offer page exists and the founder wants the demo. They say "/execution-genesis-demo" (it asks who the demo is for) or "/execution-genesis-demo <business>, <their website or page>" (a real business, read off its page). It reads squad/business.md, connects Higgsfield or Notion when the shape needs it, picks the winner in the buyer's trade and copies its shape (the sections, the first screen, where the proof and the money action sit), builds a working first version in squad/demos/<business>/ right away, and changes it 1 note at a time until the founder says done. No deck, no deploy, no made-up facts, and it never sends anything.
 ---
 
 # execution-genesis-demo
@@ -24,16 +24,19 @@ they pay. Nothing else gets written.
 - Never a real person's face, a logo, or readable text in a generated image. Never upload the buyer's
   photos. A generated photo shows their kind of place and work, and nothing on the demo calls it theirs.
 - Never the founder's price on the demo.
+- Never a word, a number, a name or a photo off the winner's page. The winner is a shape, and the
+  facts are the buyer's.
 - Never send. The founder records the Loom and sends the message by hand.
 - Never ask a first-run question from `CLAUDE.md` in the middle of a run. It waits until `Next: /execution-genesis-close.`
   is printed.
 
 ## 1. Read the page
 
-`references/shapes.md`, `references/no-slop.md`, `references/web-standard.md` and the 4 CSV files next
-to them must open. Any missing: say the agent folder was copied without its `references/`, and stop.
+`references/shapes.md`, `references/no-slop.md`, `references/web-standard.md`, `references/the-winner.md`
+and the 4 CSV files next to them must open. Any missing: say the agent folder was copied without its `references/`, and stop.
 
-Read `squad/business.md`: THE SENTENCE, WHO, THE PROBLEM, THE SHAPE, THE PROMISE, BUYER WORDS.
+Read `squad/business.md`: THE SENTENCE, WHO, THE PROBLEM, THE SHAPE, THE PROMISE, BUYER WORDS, WHAT HE
+GETS, and THE WINNERS (each block's name, link and `Page, top to bottom:` line).
 No file: print `Run /execution-genesis-offer first. The demo is built off that page.` and stop.
 
 Print the shape line for THE SHAPE, from the table in `references/shapes.md` (on `/execution-genesis-demo` alone, as
@@ -53,7 +56,7 @@ Higgsfield (content and website) and The Loom.
 ## 3. Who it is for
 
 A business that already has a folder under `squad/demos/` holding the shape's build: open it and go to
-step 6.
+step 7.
 
 **`/execution-genesis-demo` alone:** the first message is, in this order: the base line (first run only), the shape
 line, then the shape's 1 message (the question and its facts list, together). Some messages carry lines
@@ -72,27 +75,37 @@ Then write `squad/demos/<business>/facts.md` and `notes.md` (The folder, in `ref
 1 line per fact with its source, every field nobody gave under `## Blank`. A blank never gets filled
 with something that sounds nice.
 
-## 4. The skeleton, right away
+## 4. The winner
 
-Build the shape's skeleton from `references/shapes.md` now. No plan, no pick, no question. THE
-PROBLEM and BUYER WORDS decide what goes first.
+Pick the winner for THE SHAPE, read it, and write `squad/demos/<business>/winner.md`, by
+`references/the-winner.md`. Print its 1 line. A winner section `facts.md` cannot fill goes first on
+the blanks line at step 7. This is the step that makes the demo look like what already sells in the
+buyer's trade instead of a template, so it is never skipped, and it asks the founder nothing.
+
+## 5. The skeleton, right away
+
+Build the shape's skeleton from `references/shapes.md` now, in the shape `winner.md` gives (The copy,
+in `references/the-winner.md`). No plan, no pick, no question. THE PROBLEM and BUYER WORDS decide what
+goes first on the first screen; WHAT HE GETS on `squad/business.md` decides what the demo has to show
+working, because the demo is the offer, seen.
 
 - **Website:** write `photos.md` and its prompts, make the photos in the order under The make, then
-  build 1 `index.html` by `references/web-standard.md` (Website).
+  build 1 `index.html` by `references/web-standard.md` (Website), the sections in `winner.md`'s order.
 - **Content:** write The look lines and the prompts, make the set in the order under The make, then
-  write `posts.md` and `index.html`.
-- **Consulting program:** the Notion calls, in order, then `board.md`.
-- **Software:** 1 `index.html` with 3 screens by `references/web-standard.md` (Software), the task or
-  the conversation working inside the page.
+  write `posts.md` and `index.html`, the captions on `winner.md`'s pattern line.
+- **Consulting program:** the Notion calls, in order, the stage count within 1 of `winner.md`'s, then
+  `board.md`.
+- **Software:** 1 `index.html` with 3 screens by `references/web-standard.md` (Software), the winner's
+  first 3 screens by job, the task or the conversation working inside the page.
 
-## 5. The no-slop check
+## 6. The no-slop check
 
 Before the founder sees anything, run the items `references/no-slop.md` gives this shape (What runs on
 each shape). Website, software and the content feed also get The look (`references/web-standard.md`).
 Every generated photo, image and clip gets Generated images. A program gets The board. Fix every fail
 and run the check again. Never show the demo with a note about what is wrong.
 
-## 6. Show it, 1 note at a time
+## 7. Show it, 1 note at a time
 
 Open the demo once: `index.html` in the browser (`open` on a Mac, `start` on Windows, `xdg-open` on
 Linux), or print the Notion link and open it. A run with no person at the screen (an eval, a routine)
@@ -117,7 +130,7 @@ Each note:
 
 Repeat until the founder says done.
 
-## 7. Done
+## 8. Done
 
 Print the template test, quoted from the demo:
 

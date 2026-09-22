@@ -66,9 +66,11 @@ LOOM https://www.loom.com/share/<id>
 - TRADE is never asked, and a program does not write it. On a made-up run it comes from the founder's
   words, with the same source. On a real run it is the page's own words for what they do, with that URL.
 
-**The blanks line**, printed at step 6: the fields under `## Blank` in plain words, never field names.
-On a website or software run, the blanks that the trade row's `Watch Out` or the style's `Copy Angle`
-needs come first (`Blank: <those blanks>, <the rest>.`). A program names who each blank is for
+**The blanks line**, printed at step 7: the fields under `## Blank` in plain words, never field names.
+On a website run, the winner's sections `facts.md` could not fill come first, each in the winner's
+words for it (`Blank: what the winner shows that you have not given me: their work, before and after;
+then <the rest>.`). Then, on a website or software run, the blanks that the trade row's `Watch Out` or
+the style's `Copy Angle` needs (`Blank: <those blanks>, <the rest>.`). A program names who each blank is for
 (`Blank: <what is missing> for <first names>.`). No blanks: no line.
 
 **`notes.md`**, written with its header line at the same time as `facts.md`, before anything is built.
@@ -86,7 +88,7 @@ buyer complains about, fixed and in plain sight on the first screen. They steer 
 never shown as the buyer's facts. A program has no first screen: there THE PROBLEM picks 1 card property
 (Consulting program, The problem property).
 
-**The template test**, printed at step 7:
+**The template test**, printed at step 8:
 - <their place> is TOWN, ADDRESS, NEAR, AREA or SETTING. On content, <name> is NAME in the header, and
   SETTING counts when every picture shows it, written as `<SETTING> (in the pictures)`.
 - A program or a tool with no place: their NAME where it heads the page or the top bar, and <a fact of
@@ -244,8 +246,8 @@ their site already does what THE PROBLEM says is broken, print:
 `Their site already <does it>. The demo has to win on <the lead fact>, so say that in the Loom's beat 1.`
 Then build.
 
-**Files:** `facts.md`, `notes.md`, `photos.md`, `media/hero` and `media/service-1` to `media/service-3`
-(each keeps the file ending its URL has) with their `.jpg`, `index.html`.
+**Files:** `facts.md`, `notes.md`, `winner.md`, `photos.md`, `media/hero` and `media/service-1` to
+`media/service-3` (each keeps the file ending its URL has) with their `.jpg`, `index.html`.
 
 **The photos:** a hero and 1 per main service. The main services are the first 3 on `facts.md`, the
 lead fact's service first when it is one.
@@ -258,7 +260,8 @@ lead fact's service first when it is one.
 - A photo carries no caption and `alt=""`. No words on the page say whose room or work it is.
 
 **The skeleton:** 1 `index.html` by `references/web-standard.md` (Website). Sections by its field map,
-in the style row's order. What goes in each:
+in `winner.md`'s order and count (`references/the-winner.md`, The copy); the style row's order only
+with no `winner.md`. What goes in each:
 1. Hero: the name line, the H1, the second line, the money action, the hero photo and the visit card
    (`references/web-standard.md`, The hero). ACTION includes call: the call bar too.
 2. Proof: with 1 or 2 proof facts (licenses, insurance or billing, memberships, years open, rating with
@@ -276,8 +279,8 @@ in the style row's order. What goes in each:
    other fact on its own line word for word, up to 6 lines. No portrait. With 1 line only there is no
    section: a person goes on the visit card under a label of their role, and any other fact joins the
    hero's second line. A person with no role on `facts.md` is never shown.
-5. Any other section the style row names, only when `facts.md` fills it (`references/web-standard.md`,
-   Sections).
+5. Any other section `winner.md` or the style row names, only when `facts.md` fills it
+   (`references/web-standard.md`, Sections). A winner section nothing fills goes first on the blanks line.
 6. The money section at the bottom, by ACTION (`references/web-standard.md`, The money action).
 7. The footer.
 
@@ -315,7 +318,7 @@ as if it never existed. Open the file in the browser.
 gives them back, else pasted by the founder, else blank. The topics, their points and the setting, in
 words taken from those posts. Their photos are never uploaded to Higgsfield.
 
-**Files:** `facts.md`, `notes.md`, `posts.md`, `media/place`, `media/01`, `media/02`, `media/03` (each
+**Files:** `facts.md`, `notes.md`, `winner.md`, `posts.md`, `media/place`, `media/01`, `media/02`, `media/03` (each
 keeps the file ending its URL has) and `media/01.jpg` to `media/03.jpg`, `media/clip-01` (the clip's
 first frame) and `media/clip-01.jpg` (its poster, 1600px on its long side), `media/clip-01.mp4`,
 `index.html`.
@@ -328,12 +331,14 @@ work below the middle of the frame, because the page's 4:5 box cuts its top.
 
 **`posts.md`:** `## The look` with the PERSON and PLACE lines, then 1 heading per piece (`## Clip`,
 `## 01`, `## 02`, `## 03`) and its caption under it:
-- The topic's point first, as a sentence in their words, never the TOPIC alone as a 2 to 4 word
+- The first line makes the move `winner.md`'s pattern line names (a question, a number, a bare claim),
+  carrying the topic's point as a sentence in their words, never the TOPIC alone as a 2 to 4 word
   fragment. Then 1 of their WORDS that no other piece uses. Then the ACTION with what it gets, worded
   differently on each piece.
 - A point still blank: the caption opens with that WORDS line instead.
 - SETTING, LIGHT and FILMS ON steer the picture and never go in a caption.
-- Length: a real run matches their last 3 captions; a made-up run is 2 or 3 sentences. No hashtag wall.
+- Length: a real run matches their last 3 captions; a made-up run runs the winner's length within 20%
+  (`winner.md`, Pattern). No hashtag wall.
   No emoji the facts did not show.
 
 **`index.html`:** the feed, nothing else.
@@ -401,7 +406,7 @@ founder's page.
 **Real, off their page:** program name, stages, length and promise off the sales page. Clients are never
 real people: 4 cards per stage, made-up full names, source `sample`, with no problem property.
 
-**Files:** `facts.md`, `notes.md`, `board.md`. The dashboard itself lives in the founder's Notion.
+**Files:** `facts.md`, `notes.md`, `winner.md`, `board.md`. The dashboard itself lives in the founder's Notion.
 
 ---
 
@@ -567,7 +572,7 @@ page shows the `Sample data` tag.
 **Real, off their page:** service names, prices, hours and nouns off their website. Every record is a
 sample.
 
-**Files:** `facts.md`, `notes.md`, `index.html`.
+**Files:** `facts.md`, `notes.md`, `winner.md`, `index.html`.
 
 **The task tool skeleton:** 1 `index.html` by `references/web-standard.md` (Software), 3 screens, real
 clicks between them, the task working inside the page:

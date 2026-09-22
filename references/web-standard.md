@@ -24,6 +24,11 @@ takes The lookup, Tokens, Type, Colour, Layout and The look. The 4 CSV files sit
    yellow, purple or brown), take that row instead of the style's Palette ID, and say so in 1 line. No
    match: the style's Palette ID.
 
+5. `squad/demos/<business>/winner.md` (`references/the-winner.md`) wins over steps 2 to 4 for the
+   section order and the section count, gives the palette row when the buyer's own site gave no brand
+   colour (its accent, by the same colour-family rule), and gives the font pairing when its families
+   match a `fonts.csv` row. Say in 1 line what came from the winner.
+
 Copy the values out of the files. Never type a hex or a font name from memory. No 3 directions, no
 question to the founder.
 
@@ -107,8 +112,9 @@ Every colour below `:root` is a variable. A raw colour value anywhere else fails
 
 ## Website
 
-- **Sections:** the style row's `Section Order` gives the order. Each section is filled only from these
-  fields, and a section whose fields are all blank is dropped: hero = NAME, TOWN, the lead fact, PHONE,
+- **Sections:** `winner.md` gives the order and the count (`references/the-winner.md`, The copy); the
+  style row's `Section Order` only when there is no `winner.md`. Each section is filled only from these
+  fields, and a section whose fields are all blank is dropped and named on the blanks line: hero = NAME, TOWN, the lead fact, PHONE,
   ACTION, the hero photo · trust, proof or credentials strip = YEARS OPEN, RATING with REVIEW COUNT,
   licenses, memberships, INSURANCE or BILLING, a Local Signal that is a yes · services, treatments, menu
   or packages = SERVICE lines · how fast = a response time or same-day fact the founder gave ·
@@ -116,7 +122,9 @@ Every colour below `:root` is a variable. A raw colour value anywhere else fails
   skeleton) · first visit, process or how it works = STEP lines · reviews = reviews pasted with a source
   · area or location = ADDRESS, NEAR, AREA, PARKING, which live in the visit card · money section =
   ACTION · FAQ = FAQ lines · footer = NAME, PHONE, HOURS, ADDRESS or NEAR or AREA. A section this map
-  does not name (the work, before and after, a gallery) is dropped. The money section is the last
+  does not name (the work, before and after, a gallery, the team) that `winner.md` has gets a plain 1
+  to 3 word heading and the `facts.md` fields that fit it (`references/the-winner.md`, The copy); with
+  none, it is dropped and goes first on the blanks line. The money section is the last
   section before the footer; an FAQ in the row moves above it.
 - **A section that would hold 1 item under its heading is not its own section.** A person with a role
   goes on the visit card under a label of that role. 1 service joins the hero's second line. A single
